@@ -4,7 +4,7 @@ from flask_cors import CORS
 from flask import Flask, request, jsonify
 import os
 
-from lib.dataService import DataService
+from dataService.dataService import DataService
 
 dm = DataService()
 app = Flask(__name__)
