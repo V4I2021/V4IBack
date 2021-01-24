@@ -19,5 +19,13 @@ def get_folder_name():
     names = dm.read_data_names()
     return json.dumps(names)
 
+
+@app.route('/api/get_data_by_name', methods=['POST'])
+def get_data_by_name():
+    params = request.json
+    dataName = params['dataName']
+    data = dm.get_data_by_name(dataName)
+    return json.dumps(data)
+
 if __name__ == '__main__':
     app.run(debug=True, port=8888)
