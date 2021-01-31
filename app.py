@@ -14,6 +14,7 @@ FILE_ABS_PATH = os.path.dirname(__file__)
 ROOT_PATH = os.path.join(FILE_ABS_PATH, '../')
 INSIGHT_PATH = os.path.join(ROOT_PATH, 'data/insight')
 
+
 @app.route('/api/get_data_names', methods=['POST'])
 def get_folder_name():
     names = dm.read_data_names()
@@ -26,6 +27,9 @@ def get_data_by_name():
     dataName = params['dataName']
     data = dm.get_data_by_name(dataName)
     return json.dumps(data)
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=8888)
