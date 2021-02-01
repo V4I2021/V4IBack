@@ -57,7 +57,7 @@ class DataService():
     def get_subspace_count_for_record_by_name(self, name):
         sid_cid_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
         sid_cid_df = pd.read_csv(sid_cid_path)
-        insight_data = self.__get_insight_by_name(name)
+        insight_data, _, _ = self.__get_insight_by_name(name)
         iids_df = pd.merge(insight_data, sid_cid_df, on='sid', how='inner')
         iids_df = iids_df.groupby('cid')['iid'].apply(list).reset_index(name='iids')
         iids_df['iid_count'] = [len(id_list) for id_list in iids_df['iids']]
