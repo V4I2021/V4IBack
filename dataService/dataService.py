@@ -48,9 +48,9 @@ class DataService():
             'record': record_data.to_dict('records'),
             'insight': insight_data.to_dict('records'),
             'edge': edge_data.to_dict('records'),
-            'feature': {'feature': feature_data},
-            'insight_name': {'insight_name': insight_name},
-            'insight_type': {'insight_type': insight_type},
+            'feature': feature_data,
+            'insight_name': insight_name,
+            'insight_type': insight_type,
             'subspace': subspace_data.to_dict('records')
         }
 
