@@ -1,0 +1,91 @@
+Birthday,Age Segment,Marital Status,Sex,Age Group,Count of persons,cid
+2003,15-19 years,Married(a),Male,Young,488,0
+2003,15-19 years,Separated,Male,Young,64,1
+2002,15-19 years,Divorced,Male,Young,93,2
+2002,15-19 years,Widowed,Male,Young,65,3
+2001,15-19 years,Never married,Male,Young,181127,4
+2001,15-19 years,Married(a),Female,Young,731,5
+2000,15-19 years,Separated,Female,Young,75,6
+2000,15-19 years,Divorced,Female,Young,82,7
+1999,15-19 years,Widowed,Female,Young,92,8
+1999,15-19 years,Never married,Female,Young,173509,9
+1998,20-24 years,Married(a),Male,Young,5962,10
+1998,20-24 years,Separated,Male,Young,315,11
+1997,20-24 years,Divorced,Male,Young,189,12
+1997,20-24 years,Widowed,Male,Young,129,13
+1996,20-24 years,Never married,Male,Young,203137,14
+1996,20-24 years,Married(a),Female,Young,13320,15
+1995,20-24 years,Separated,Female,Young,789,16
+1995,20-24 years,Divorced,Female,Young,371,17
+1994,20-24 years,Widowed,Female,Young,166,18
+1994,20-24 years,Never married,Female,Young,189413,19
+1993,25-34 years,Married(a),Male,Young,156256,20
+1992,25-34 years,Separated,Male,Young,5925,21
+1991,25-34 years,Divorced,Male,Young,5767,22
+1990,25-34 years,Widowed,Male,Young,372,23
+1989,25-34 years,Never married,Male,Young,268839,24
+1988,25-34 years,Married(a),Female,Young,197188,25
+1987,25-34 years,Separated,Female,Young,9807,26
+1986,25-34 years,Divorced,Female,Young,9692,27
+1985,25-34 years,Widowed,Female,Young,738,28
+1984,25-34 years,Never married,Female,Young,234601,29
+1983,35-44 years,Married(a),Male,Middle Age,248793,30
+1982,35-44 years,Separated,Male,Middle Age,13441,31
+1981,35-44 years,Divorced,Male,Middle Age,20192,32
+1980,35-44 years,Widowed,Male,Middle Age,842,33
+1979,35-44 years,Never married,Male,Middle Age,112702,34
+1978,35-44 years,Married(a),Female,Middle Age,255833,35
+1977,35-44 years,Separated,Female,Middle Age,18784,36
+1976,35-44 years,Divorced,Female,Middle Age,31319,37
+1975,35-44 years,Widowed,Female,Middle Age,2409,38
+1974,35-44 years,Never married,Female,Middle Age,101594,39
+1973,45-54 years,Married(a),Male,Middle Age,242563,40
+1972,45-54 years,Separated,Male,Middle Age,18427,41
+1971,45-54 years,Divorced,Male,Middle Age,41479,42
+1970,45-54 years,Widowed,Male,Middle Age,2376,43
+1969,45-54 years,Never married,Male,Middle Age,74538,44
+1968,45-54 years,Married(a),Female,Middle Age,246808,45
+1967,45-54 years,Separated,Female,Middle Age,22706,46
+1966,45-54 years,Divorced,Female,Middle Age,61078,47
+1965,45-54 years,Widowed,Female,Middle Age,7447,48
+1964,45-54 years,Never married,Female,Middle Age,63007,49
+1963,55-64 years,Married(a),Male,Middle Age,220145,50
+1962,55-64 years,Separated,Male,Middle Age,14989,51
+1961,55-64 years,Divorced,Male,Middle Age,46500,52
+1960,55-64 years,Widowed,Male,Middle Age,5846,53
+1959,55-64 years,Never married,Male,Middle Age,40094,54
+1958,55-64 years,Married(a),Female,Middle Age,216669,55
+1957,55-64 years,Separated,Female,Middle Age,16640,56
+1956,55-64 years,Divorced,Female,Middle Age,64086,57
+1955,55-64 years,Widowed,Female,Middle Age,20072,58
+1954,55-64 years,Never married,Female,Middle Age,32416,59
+1953,65-74 years,Married(a),Male,Old,177199,60
+1952,65-74 years,Separated,Male,Old,9263,61
+1951,65-74 years,Divorced,Male,Old,30434,62
+1950,65-74 years,Widowed,Male,Old,11137,63
+1949,65-74 years,Never married,Male,Old,16790,64
+1948,65-74 years,Married(a),Female,Old,159640,65
+1947,65-74 years,Separated,Female,Old,8435,66
+1946,65-74 years,Divorced,Female,Old,41918,67
+1945,65-74 years,Widowed,Female,Old,42143,68
+1944,65-74 years,Never married,Female,Old,12637,69
+1943,75-84 years,Married(a),Male,Old,93832,70
+1942,75-84 years,Separated,Male,Old,3196,71
+1941,75-84 years,Divorced,Male,Old,10154,72
+1940,75-84 years,Widowed,Male,Old,16221,73
+1939,75-84 years,Never married,Male,Old,6044,74
+1938,75-84 years,Married(a),Female,Old,68214,75
+1937,75-84 years,Separated,Female,Old,2472,76
+1936,75-84 years,Divorced,Female,Old,13856,77
+1935,75-84 years,Widowed,Female,Old,65711,78
+1934,75-84 years,Never married,Female,Old,5307,79
+1933,85 years and over,Married(a),Male,Old,26729,80
+1933,85 years and over,Separated,Male,Old,716,81
+1932,85 years and over,Divorced,Male,Old,1913,82
+1931,85 years and over,Widowed,Male,Old,16065,83
+1930,85 years and over,Never married,Male,Old,2141,84
+1930,85 years and over,Married(a),Female,Old,13734,85
+1930,85 years and over,Separated,Female,Old,439,86
+1929,85 years and over,Divorced,Female,Old,3419,87
+1929,85 years and over,Widowed,Female,Old,59835,88
+1928,85 years and over,Never married,Female,Old,3000,89

@@ -28,6 +28,19 @@ def get_data_by_name():
     data = dm.get_data_by_name(dataName)
     return json.dumps(data)
 
+@app.route('/api/get_record', methods=['POST'])
+def get_record():
+    params = request.json
+    dataName = params['dataName']
+    data = dm.get_record_by_name(dataName)
+    return json.dumps(data)
+
+@app.route('/api/get_insight_count_for_record', methods=['POST'])
+def get_insight_count_for_record():
+    params = request.json
+    dataName = params['dataName']
+    data = dm.get_subspace_count_for_record_by_name(dataName)
+    return json.dumps(data, sort_keys=False)
 
 
 

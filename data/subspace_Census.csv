@@ -1,0 +1,1737 @@
+Birthday,Age Segment,Marital Status,Sex,Age Group,sid
+*,*,*,*,*,0
+2003,*,*,*,*,3
+2002,*,*,*,*,4
+2001,*,*,*,*,5
+2000,*,*,*,*,6
+1999,*,*,*,*,7
+1998,*,*,*,*,8
+1997,*,*,*,*,9
+1996,*,*,*,*,10
+1995,*,*,*,*,11
+1994,*,*,*,*,12
+1993,*,*,*,*,13
+1992,*,*,*,*,14
+1991,*,*,*,*,15
+1990,*,*,*,*,16
+1989,*,*,*,*,17
+1988,*,*,*,*,18
+1987,*,*,*,*,19
+1986,*,*,*,*,20
+1985,*,*,*,*,21
+1984,*,*,*,*,22
+1983,*,*,*,*,23
+1982,*,*,*,*,24
+1981,*,*,*,*,25
+1980,*,*,*,*,26
+1979,*,*,*,*,27
+1978,*,*,*,*,28
+1977,*,*,*,*,29
+1976,*,*,*,*,30
+1975,*,*,*,*,31
+1974,*,*,*,*,32
+1973,*,*,*,*,33
+1972,*,*,*,*,34
+1971,*,*,*,*,35
+1970,*,*,*,*,36
+1969,*,*,*,*,37
+1968,*,*,*,*,38
+1967,*,*,*,*,39
+1966,*,*,*,*,40
+1965,*,*,*,*,41
+1964,*,*,*,*,42
+1963,*,*,*,*,43
+1962,*,*,*,*,44
+1961,*,*,*,*,45
+1960,*,*,*,*,46
+1959,*,*,*,*,47
+1958,*,*,*,*,48
+1957,*,*,*,*,49
+1956,*,*,*,*,50
+1955,*,*,*,*,51
+1954,*,*,*,*,52
+1953,*,*,*,*,53
+1952,*,*,*,*,54
+1951,*,*,*,*,55
+1950,*,*,*,*,56
+1949,*,*,*,*,57
+1948,*,*,*,*,58
+1947,*,*,*,*,59
+1946,*,*,*,*,60
+1945,*,*,*,*,61
+1944,*,*,*,*,62
+1943,*,*,*,*,63
+1942,*,*,*,*,64
+1941,*,*,*,*,65
+1940,*,*,*,*,66
+1939,*,*,*,*,67
+1938,*,*,*,*,68
+1937,*,*,*,*,69
+1936,*,*,*,*,70
+1935,*,*,*,*,71
+1934,*,*,*,*,72
+1933,*,*,*,*,73
+1932,*,*,*,*,74
+1931,*,*,*,*,75
+1930,*,*,*,*,76
+1929,*,*,*,*,77
+1928,*,*,*,*,78
+*,15-19 years,*,*,*,79
+*,20-24 years,*,*,*,80
+*,25-34 years,*,*,*,81
+*,35-44 years,*,*,*,82
+*,45-54 years,*,*,*,83
+*,55-64 years,*,*,*,84
+*,65-74 years,*,*,*,85
+*,75-84 years,*,*,*,86
+*,85 years and over,*,*,*,87
+2003,15-19 years,*,*,*,88
+2002,15-19 years,*,*,*,89
+2001,15-19 years,*,*,*,90
+2000,15-19 years,*,*,*,91
+1999,15-19 years,*,*,*,92
+1998,20-24 years,*,*,*,93
+1997,20-24 years,*,*,*,94
+1996,20-24 years,*,*,*,95
+1995,20-24 years,*,*,*,96
+1994,20-24 years,*,*,*,97
+1993,25-34 years,*,*,*,98
+1992,25-34 years,*,*,*,99
+1991,25-34 years,*,*,*,100
+1990,25-34 years,*,*,*,101
+1989,25-34 years,*,*,*,102
+1988,25-34 years,*,*,*,103
+1987,25-34 years,*,*,*,104
+1986,25-34 years,*,*,*,105
+1985,25-34 years,*,*,*,106
+1984,25-34 years,*,*,*,107
+1983,35-44 years,*,*,*,108
+1982,35-44 years,*,*,*,109
+1981,35-44 years,*,*,*,110
+1980,35-44 years,*,*,*,111
+1979,35-44 years,*,*,*,112
+1978,35-44 years,*,*,*,113
+1977,35-44 years,*,*,*,114
+1976,35-44 years,*,*,*,115
+1975,35-44 years,*,*,*,116
+1974,35-44 years,*,*,*,117
+1973,45-54 years,*,*,*,118
+1972,45-54 years,*,*,*,119
+1971,45-54 years,*,*,*,120
+1970,45-54 years,*,*,*,121
+1969,45-54 years,*,*,*,122
+1968,45-54 years,*,*,*,123
+1967,45-54 years,*,*,*,124
+1966,45-54 years,*,*,*,125
+1965,45-54 years,*,*,*,126
+1964,45-54 years,*,*,*,127
+1963,55-64 years,*,*,*,128
+1962,55-64 years,*,*,*,129
+1961,55-64 years,*,*,*,130
+1960,55-64 years,*,*,*,131
+1959,55-64 years,*,*,*,132
+1958,55-64 years,*,*,*,133
+1957,55-64 years,*,*,*,134
+1956,55-64 years,*,*,*,135
+1955,55-64 years,*,*,*,136
+1954,55-64 years,*,*,*,137
+1953,65-74 years,*,*,*,138
+1952,65-74 years,*,*,*,139
+1951,65-74 years,*,*,*,140
+1950,65-74 years,*,*,*,141
+1949,65-74 years,*,*,*,142
+1948,65-74 years,*,*,*,143
+1947,65-74 years,*,*,*,144
+1946,65-74 years,*,*,*,145
+1945,65-74 years,*,*,*,146
+1944,65-74 years,*,*,*,147
+1943,75-84 years,*,*,*,148
+1942,75-84 years,*,*,*,149
+1941,75-84 years,*,*,*,150
+1940,75-84 years,*,*,*,151
+1939,75-84 years,*,*,*,152
+1938,75-84 years,*,*,*,153
+1937,75-84 years,*,*,*,154
+1936,75-84 years,*,*,*,155
+1935,75-84 years,*,*,*,156
+1934,75-84 years,*,*,*,157
+1933,85 years and over,*,*,*,158
+1932,85 years and over,*,*,*,159
+1931,85 years and over,*,*,*,160
+1930,85 years and over,*,*,*,161
+1929,85 years and over,*,*,*,162
+1928,85 years and over,*,*,*,163
+*,*,Married(a),*,*,164
+*,*,Separated,*,*,165
+*,*,Divorced,*,*,166
+*,*,Widowed,*,*,167
+*,*,Never married,*,*,168
+2003,*,Married(a),*,*,179
+2003,*,Separated,*,*,180
+2002,*,Divorced,*,*,181
+2002,*,Widowed,*,*,182
+2001,*,Never married,*,*,183
+2001,*,Married(a),*,*,184
+2000,*,Separated,*,*,185
+2000,*,Divorced,*,*,186
+1999,*,Widowed,*,*,187
+1999,*,Never married,*,*,188
+1998,*,Married(a),*,*,189
+1998,*,Separated,*,*,190
+1997,*,Divorced,*,*,191
+1997,*,Widowed,*,*,192
+1996,*,Never married,*,*,193
+1996,*,Married(a),*,*,194
+1995,*,Separated,*,*,195
+1995,*,Divorced,*,*,196
+1994,*,Widowed,*,*,197
+1994,*,Never married,*,*,198
+1993,*,Married(a),*,*,199
+1992,*,Separated,*,*,200
+1991,*,Divorced,*,*,201
+1990,*,Widowed,*,*,202
+1989,*,Never married,*,*,203
+1988,*,Married(a),*,*,204
+1987,*,Separated,*,*,205
+1986,*,Divorced,*,*,206
+1985,*,Widowed,*,*,207
+1984,*,Never married,*,*,208
+1983,*,Married(a),*,*,209
+1982,*,Separated,*,*,210
+1981,*,Divorced,*,*,211
+1980,*,Widowed,*,*,212
+1979,*,Never married,*,*,213
+1978,*,Married(a),*,*,214
+1977,*,Separated,*,*,215
+1976,*,Divorced,*,*,216
+1975,*,Widowed,*,*,217
+1974,*,Never married,*,*,218
+1973,*,Married(a),*,*,219
+1972,*,Separated,*,*,220
+1971,*,Divorced,*,*,221
+1970,*,Widowed,*,*,222
+1969,*,Never married,*,*,223
+1968,*,Married(a),*,*,224
+1967,*,Separated,*,*,225
+1966,*,Divorced,*,*,226
+1965,*,Widowed,*,*,227
+1964,*,Never married,*,*,228
+1963,*,Married(a),*,*,229
+1962,*,Separated,*,*,230
+1961,*,Divorced,*,*,231
+1960,*,Widowed,*,*,232
+1959,*,Never married,*,*,233
+1958,*,Married(a),*,*,234
+1957,*,Separated,*,*,235
+1956,*,Divorced,*,*,236
+1955,*,Widowed,*,*,237
+1954,*,Never married,*,*,238
+1953,*,Married(a),*,*,239
+1952,*,Separated,*,*,240
+1951,*,Divorced,*,*,241
+1950,*,Widowed,*,*,242
+1949,*,Never married,*,*,243
+1948,*,Married(a),*,*,244
+1947,*,Separated,*,*,245
+1946,*,Divorced,*,*,246
+1945,*,Widowed,*,*,247
+1944,*,Never married,*,*,248
+1943,*,Married(a),*,*,249
+1942,*,Separated,*,*,250
+1941,*,Divorced,*,*,251
+1940,*,Widowed,*,*,252
+1939,*,Never married,*,*,253
+1938,*,Married(a),*,*,254
+1937,*,Separated,*,*,255
+1936,*,Divorced,*,*,256
+1935,*,Widowed,*,*,257
+1934,*,Never married,*,*,258
+1933,*,Married(a),*,*,259
+1933,*,Separated,*,*,260
+1932,*,Divorced,*,*,261
+1931,*,Widowed,*,*,262
+1930,*,Never married,*,*,263
+1930,*,Married(a),*,*,264
+1930,*,Separated,*,*,265
+1929,*,Divorced,*,*,266
+1929,*,Widowed,*,*,267
+1928,*,Never married,*,*,268
+*,15-19 years,Married(a),*,*,269
+*,15-19 years,Separated,*,*,270
+*,15-19 years,Divorced,*,*,271
+*,15-19 years,Widowed,*,*,272
+*,15-19 years,Never married,*,*,273
+*,20-24 years,Married(a),*,*,274
+*,20-24 years,Separated,*,*,275
+*,20-24 years,Divorced,*,*,276
+*,20-24 years,Widowed,*,*,277
+*,20-24 years,Never married,*,*,278
+*,25-34 years,Married(a),*,*,279
+*,25-34 years,Separated,*,*,280
+*,25-34 years,Divorced,*,*,281
+*,25-34 years,Widowed,*,*,282
+*,25-34 years,Never married,*,*,283
+*,35-44 years,Married(a),*,*,284
+*,35-44 years,Separated,*,*,285
+*,35-44 years,Divorced,*,*,286
+*,35-44 years,Widowed,*,*,287
+*,35-44 years,Never married,*,*,288
+*,45-54 years,Married(a),*,*,289
+*,45-54 years,Separated,*,*,290
+*,45-54 years,Divorced,*,*,291
+*,45-54 years,Widowed,*,*,292
+*,45-54 years,Never married,*,*,293
+*,55-64 years,Married(a),*,*,294
+*,55-64 years,Separated,*,*,295
+*,55-64 years,Divorced,*,*,296
+*,55-64 years,Widowed,*,*,297
+*,55-64 years,Never married,*,*,298
+*,65-74 years,Married(a),*,*,299
+*,65-74 years,Separated,*,*,300
+*,65-74 years,Divorced,*,*,301
+*,65-74 years,Widowed,*,*,302
+*,65-74 years,Never married,*,*,303
+*,75-84 years,Married(a),*,*,304
+*,75-84 years,Separated,*,*,305
+*,75-84 years,Divorced,*,*,306
+*,75-84 years,Widowed,*,*,307
+*,75-84 years,Never married,*,*,308
+*,85 years and over,Married(a),*,*,309
+*,85 years and over,Separated,*,*,310
+*,85 years and over,Divorced,*,*,311
+*,85 years and over,Widowed,*,*,312
+*,85 years and over,Never married,*,*,313
+2003,15-19 years,Married(a),*,*,314
+2003,15-19 years,Separated,*,*,315
+2002,15-19 years,Divorced,*,*,316
+2002,15-19 years,Widowed,*,*,317
+2001,15-19 years,Never married,*,*,318
+2001,15-19 years,Married(a),*,*,319
+2000,15-19 years,Separated,*,*,320
+2000,15-19 years,Divorced,*,*,321
+1999,15-19 years,Widowed,*,*,322
+1999,15-19 years,Never married,*,*,323
+1998,20-24 years,Married(a),*,*,324
+1998,20-24 years,Separated,*,*,325
+1997,20-24 years,Divorced,*,*,326
+1997,20-24 years,Widowed,*,*,327
+1996,20-24 years,Never married,*,*,328
+1996,20-24 years,Married(a),*,*,329
+1995,20-24 years,Separated,*,*,330
+1995,20-24 years,Divorced,*,*,331
+1994,20-24 years,Widowed,*,*,332
+1994,20-24 years,Never married,*,*,333
+1993,25-34 years,Married(a),*,*,334
+1992,25-34 years,Separated,*,*,335
+1991,25-34 years,Divorced,*,*,336
+1990,25-34 years,Widowed,*,*,337
+1989,25-34 years,Never married,*,*,338
+1988,25-34 years,Married(a),*,*,339
+1987,25-34 years,Separated,*,*,340
+1986,25-34 years,Divorced,*,*,341
+1985,25-34 years,Widowed,*,*,342
+1984,25-34 years,Never married,*,*,343
+1983,35-44 years,Married(a),*,*,344
+1982,35-44 years,Separated,*,*,345
+1981,35-44 years,Divorced,*,*,346
+1980,35-44 years,Widowed,*,*,347
+1979,35-44 years,Never married,*,*,348
+1978,35-44 years,Married(a),*,*,349
+1977,35-44 years,Separated,*,*,350
+1976,35-44 years,Divorced,*,*,351
+1975,35-44 years,Widowed,*,*,352
+1974,35-44 years,Never married,*,*,353
+1973,45-54 years,Married(a),*,*,354
+1972,45-54 years,Separated,*,*,355
+1971,45-54 years,Divorced,*,*,356
+1970,45-54 years,Widowed,*,*,357
+1969,45-54 years,Never married,*,*,358
+1968,45-54 years,Married(a),*,*,359
+1967,45-54 years,Separated,*,*,360
+1966,45-54 years,Divorced,*,*,361
+1965,45-54 years,Widowed,*,*,362
+1964,45-54 years,Never married,*,*,363
+1963,55-64 years,Married(a),*,*,364
+1962,55-64 years,Separated,*,*,365
+1961,55-64 years,Divorced,*,*,366
+1960,55-64 years,Widowed,*,*,367
+1959,55-64 years,Never married,*,*,368
+1958,55-64 years,Married(a),*,*,369
+1957,55-64 years,Separated,*,*,370
+1956,55-64 years,Divorced,*,*,371
+1955,55-64 years,Widowed,*,*,372
+1954,55-64 years,Never married,*,*,373
+1953,65-74 years,Married(a),*,*,374
+1952,65-74 years,Separated,*,*,375
+1951,65-74 years,Divorced,*,*,376
+1950,65-74 years,Widowed,*,*,377
+1949,65-74 years,Never married,*,*,378
+1948,65-74 years,Married(a),*,*,379
+1947,65-74 years,Separated,*,*,380
+1946,65-74 years,Divorced,*,*,381
+1945,65-74 years,Widowed,*,*,382
+1944,65-74 years,Never married,*,*,383
+1943,75-84 years,Married(a),*,*,384
+1942,75-84 years,Separated,*,*,385
+1941,75-84 years,Divorced,*,*,386
+1940,75-84 years,Widowed,*,*,387
+1939,75-84 years,Never married,*,*,388
+1938,75-84 years,Married(a),*,*,389
+1937,75-84 years,Separated,*,*,390
+1936,75-84 years,Divorced,*,*,391
+1935,75-84 years,Widowed,*,*,392
+1934,75-84 years,Never married,*,*,393
+1933,85 years and over,Married(a),*,*,394
+1933,85 years and over,Separated,*,*,395
+1932,85 years and over,Divorced,*,*,396
+1931,85 years and over,Widowed,*,*,397
+1930,85 years and over,Never married,*,*,398
+1930,85 years and over,Married(a),*,*,399
+1930,85 years and over,Separated,*,*,400
+1929,85 years and over,Divorced,*,*,401
+1929,85 years and over,Widowed,*,*,402
+1928,85 years and over,Never married,*,*,403
+*,*,*,Male,*,404
+*,*,*,Female,*,405
+2003,*,*,Male,*,410
+2002,*,*,Male,*,411
+2001,*,*,Male,*,412
+2001,*,*,Female,*,413
+2000,*,*,Female,*,414
+1999,*,*,Female,*,415
+1998,*,*,Male,*,416
+1997,*,*,Male,*,417
+1996,*,*,Male,*,418
+1996,*,*,Female,*,419
+1995,*,*,Female,*,420
+1994,*,*,Female,*,421
+1993,*,*,Male,*,422
+1992,*,*,Male,*,423
+1991,*,*,Male,*,424
+1990,*,*,Male,*,425
+1989,*,*,Male,*,426
+1988,*,*,Female,*,427
+1987,*,*,Female,*,428
+1986,*,*,Female,*,429
+1985,*,*,Female,*,430
+1984,*,*,Female,*,431
+1983,*,*,Male,*,432
+1982,*,*,Male,*,433
+1981,*,*,Male,*,434
+1980,*,*,Male,*,435
+1979,*,*,Male,*,436
+1978,*,*,Female,*,437
+1977,*,*,Female,*,438
+1976,*,*,Female,*,439
+1975,*,*,Female,*,440
+1974,*,*,Female,*,441
+1973,*,*,Male,*,442
+1972,*,*,Male,*,443
+1971,*,*,Male,*,444
+1970,*,*,Male,*,445
+1969,*,*,Male,*,446
+1968,*,*,Female,*,447
+1967,*,*,Female,*,448
+1966,*,*,Female,*,449
+1965,*,*,Female,*,450
+1964,*,*,Female,*,451
+1963,*,*,Male,*,452
+1962,*,*,Male,*,453
+1961,*,*,Male,*,454
+1960,*,*,Male,*,455
+1959,*,*,Male,*,456
+1958,*,*,Female,*,457
+1957,*,*,Female,*,458
+1956,*,*,Female,*,459
+1955,*,*,Female,*,460
+1954,*,*,Female,*,461
+1953,*,*,Male,*,462
+1952,*,*,Male,*,463
+1951,*,*,Male,*,464
+1950,*,*,Male,*,465
+1949,*,*,Male,*,466
+1948,*,*,Female,*,467
+1947,*,*,Female,*,468
+1946,*,*,Female,*,469
+1945,*,*,Female,*,470
+1944,*,*,Female,*,471
+1943,*,*,Male,*,472
+1942,*,*,Male,*,473
+1941,*,*,Male,*,474
+1940,*,*,Male,*,475
+1939,*,*,Male,*,476
+1938,*,*,Female,*,477
+1937,*,*,Female,*,478
+1936,*,*,Female,*,479
+1935,*,*,Female,*,480
+1934,*,*,Female,*,481
+1933,*,*,Male,*,482
+1932,*,*,Male,*,483
+1931,*,*,Male,*,484
+1930,*,*,Male,*,485
+1930,*,*,Female,*,486
+1929,*,*,Female,*,487
+1928,*,*,Female,*,488
+*,15-19 years,*,Male,*,489
+*,15-19 years,*,Female,*,490
+*,20-24 years,*,Male,*,491
+*,20-24 years,*,Female,*,492
+*,25-34 years,*,Male,*,493
+*,25-34 years,*,Female,*,494
+*,35-44 years,*,Male,*,495
+*,35-44 years,*,Female,*,496
+*,45-54 years,*,Male,*,497
+*,45-54 years,*,Female,*,498
+*,55-64 years,*,Male,*,499
+*,55-64 years,*,Female,*,500
+*,65-74 years,*,Male,*,501
+*,65-74 years,*,Female,*,502
+*,75-84 years,*,Male,*,503
+*,75-84 years,*,Female,*,504
+*,85 years and over,*,Male,*,505
+*,85 years and over,*,Female,*,506
+2003,15-19 years,*,Male,*,507
+2002,15-19 years,*,Male,*,508
+2001,15-19 years,*,Male,*,509
+2001,15-19 years,*,Female,*,510
+2000,15-19 years,*,Female,*,511
+1999,15-19 years,*,Female,*,512
+1998,20-24 years,*,Male,*,513
+1997,20-24 years,*,Male,*,514
+1996,20-24 years,*,Male,*,515
+1996,20-24 years,*,Female,*,516
+1995,20-24 years,*,Female,*,517
+1994,20-24 years,*,Female,*,518
+1993,25-34 years,*,Male,*,519
+1992,25-34 years,*,Male,*,520
+1991,25-34 years,*,Male,*,521
+1990,25-34 years,*,Male,*,522
+1989,25-34 years,*,Male,*,523
+1988,25-34 years,*,Female,*,524
+1987,25-34 years,*,Female,*,525
+1986,25-34 years,*,Female,*,526
+1985,25-34 years,*,Female,*,527
+1984,25-34 years,*,Female,*,528
+1983,35-44 years,*,Male,*,529
+1982,35-44 years,*,Male,*,530
+1981,35-44 years,*,Male,*,531
+1980,35-44 years,*,Male,*,532
+1979,35-44 years,*,Male,*,533
+1978,35-44 years,*,Female,*,534
+1977,35-44 years,*,Female,*,535
+1976,35-44 years,*,Female,*,536
+1975,35-44 years,*,Female,*,537
+1974,35-44 years,*,Female,*,538
+1973,45-54 years,*,Male,*,539
+1972,45-54 years,*,Male,*,540
+1971,45-54 years,*,Male,*,541
+1970,45-54 years,*,Male,*,542
+1969,45-54 years,*,Male,*,543
+1968,45-54 years,*,Female,*,544
+1967,45-54 years,*,Female,*,545
+1966,45-54 years,*,Female,*,546
+1965,45-54 years,*,Female,*,547
+1964,45-54 years,*,Female,*,548
+1963,55-64 years,*,Male,*,549
+1962,55-64 years,*,Male,*,550
+1961,55-64 years,*,Male,*,551
+1960,55-64 years,*,Male,*,552
+1959,55-64 years,*,Male,*,553
+1958,55-64 years,*,Female,*,554
+1957,55-64 years,*,Female,*,555
+1956,55-64 years,*,Female,*,556
+1955,55-64 years,*,Female,*,557
+1954,55-64 years,*,Female,*,558
+1953,65-74 years,*,Male,*,559
+1952,65-74 years,*,Male,*,560
+1951,65-74 years,*,Male,*,561
+1950,65-74 years,*,Male,*,562
+1949,65-74 years,*,Male,*,563
+1948,65-74 years,*,Female,*,564
+1947,65-74 years,*,Female,*,565
+1946,65-74 years,*,Female,*,566
+1945,65-74 years,*,Female,*,567
+1944,65-74 years,*,Female,*,568
+1943,75-84 years,*,Male,*,569
+1942,75-84 years,*,Male,*,570
+1941,75-84 years,*,Male,*,571
+1940,75-84 years,*,Male,*,572
+1939,75-84 years,*,Male,*,573
+1938,75-84 years,*,Female,*,574
+1937,75-84 years,*,Female,*,575
+1936,75-84 years,*,Female,*,576
+1935,75-84 years,*,Female,*,577
+1934,75-84 years,*,Female,*,578
+1933,85 years and over,*,Male,*,579
+1932,85 years and over,*,Male,*,580
+1931,85 years and over,*,Male,*,581
+1930,85 years and over,*,Male,*,582
+1930,85 years and over,*,Female,*,583
+1929,85 years and over,*,Female,*,584
+1928,85 years and over,*,Female,*,585
+*,*,Married(a),Male,*,586
+*,*,Separated,Male,*,587
+*,*,Divorced,Male,*,588
+*,*,Widowed,Male,*,589
+*,*,Never married,Male,*,590
+*,*,Married(a),Female,*,591
+*,*,Separated,Female,*,592
+*,*,Divorced,Female,*,593
+*,*,Widowed,Female,*,594
+*,*,Never married,Female,*,595
+2003,*,Married(a),Male,*,616
+2003,*,Separated,Male,*,617
+2002,*,Divorced,Male,*,618
+2002,*,Widowed,Male,*,619
+2001,*,Never married,Male,*,620
+2001,*,Married(a),Female,*,621
+2000,*,Separated,Female,*,622
+2000,*,Divorced,Female,*,623
+1999,*,Widowed,Female,*,624
+1999,*,Never married,Female,*,625
+1998,*,Married(a),Male,*,626
+1998,*,Separated,Male,*,627
+1997,*,Divorced,Male,*,628
+1997,*,Widowed,Male,*,629
+1996,*,Never married,Male,*,630
+1996,*,Married(a),Female,*,631
+1995,*,Separated,Female,*,632
+1995,*,Divorced,Female,*,633
+1994,*,Widowed,Female,*,634
+1994,*,Never married,Female,*,635
+1993,*,Married(a),Male,*,636
+1992,*,Separated,Male,*,637
+1991,*,Divorced,Male,*,638
+1990,*,Widowed,Male,*,639
+1989,*,Never married,Male,*,640
+1988,*,Married(a),Female,*,641
+1987,*,Separated,Female,*,642
+1986,*,Divorced,Female,*,643
+1985,*,Widowed,Female,*,644
+1984,*,Never married,Female,*,645
+1983,*,Married(a),Male,*,646
+1982,*,Separated,Male,*,647
+1981,*,Divorced,Male,*,648
+1980,*,Widowed,Male,*,649
+1979,*,Never married,Male,*,650
+1978,*,Married(a),Female,*,651
+1977,*,Separated,Female,*,652
+1976,*,Divorced,Female,*,653
+1975,*,Widowed,Female,*,654
+1974,*,Never married,Female,*,655
+1973,*,Married(a),Male,*,656
+1972,*,Separated,Male,*,657
+1971,*,Divorced,Male,*,658
+1970,*,Widowed,Male,*,659
+1969,*,Never married,Male,*,660
+1968,*,Married(a),Female,*,661
+1967,*,Separated,Female,*,662
+1966,*,Divorced,Female,*,663
+1965,*,Widowed,Female,*,664
+1964,*,Never married,Female,*,665
+1963,*,Married(a),Male,*,666
+1962,*,Separated,Male,*,667
+1961,*,Divorced,Male,*,668
+1960,*,Widowed,Male,*,669
+1959,*,Never married,Male,*,670
+1958,*,Married(a),Female,*,671
+1957,*,Separated,Female,*,672
+1956,*,Divorced,Female,*,673
+1955,*,Widowed,Female,*,674
+1954,*,Never married,Female,*,675
+1953,*,Married(a),Male,*,676
+1952,*,Separated,Male,*,677
+1951,*,Divorced,Male,*,678
+1950,*,Widowed,Male,*,679
+1949,*,Never married,Male,*,680
+1948,*,Married(a),Female,*,681
+1947,*,Separated,Female,*,682
+1946,*,Divorced,Female,*,683
+1945,*,Widowed,Female,*,684
+1944,*,Never married,Female,*,685
+1943,*,Married(a),Male,*,686
+1942,*,Separated,Male,*,687
+1941,*,Divorced,Male,*,688
+1940,*,Widowed,Male,*,689
+1939,*,Never married,Male,*,690
+1938,*,Married(a),Female,*,691
+1937,*,Separated,Female,*,692
+1936,*,Divorced,Female,*,693
+1935,*,Widowed,Female,*,694
+1934,*,Never married,Female,*,695
+1933,*,Married(a),Male,*,696
+1933,*,Separated,Male,*,697
+1932,*,Divorced,Male,*,698
+1931,*,Widowed,Male,*,699
+1930,*,Never married,Male,*,700
+1930,*,Married(a),Female,*,701
+1930,*,Separated,Female,*,702
+1929,*,Divorced,Female,*,703
+1929,*,Widowed,Female,*,704
+1928,*,Never married,Female,*,705
+*,15-19 years,Married(a),Male,*,706
+*,15-19 years,Separated,Male,*,707
+*,15-19 years,Divorced,Male,*,708
+*,15-19 years,Widowed,Male,*,709
+*,15-19 years,Never married,Male,*,710
+*,15-19 years,Married(a),Female,*,711
+*,15-19 years,Separated,Female,*,712
+*,15-19 years,Divorced,Female,*,713
+*,15-19 years,Widowed,Female,*,714
+*,15-19 years,Never married,Female,*,715
+*,20-24 years,Married(a),Male,*,716
+*,20-24 years,Separated,Male,*,717
+*,20-24 years,Divorced,Male,*,718
+*,20-24 years,Widowed,Male,*,719
+*,20-24 years,Never married,Male,*,720
+*,20-24 years,Married(a),Female,*,721
+*,20-24 years,Separated,Female,*,722
+*,20-24 years,Divorced,Female,*,723
+*,20-24 years,Widowed,Female,*,724
+*,20-24 years,Never married,Female,*,725
+*,25-34 years,Married(a),Male,*,726
+*,25-34 years,Separated,Male,*,727
+*,25-34 years,Divorced,Male,*,728
+*,25-34 years,Widowed,Male,*,729
+*,25-34 years,Never married,Male,*,730
+*,25-34 years,Married(a),Female,*,731
+*,25-34 years,Separated,Female,*,732
+*,25-34 years,Divorced,Female,*,733
+*,25-34 years,Widowed,Female,*,734
+*,25-34 years,Never married,Female,*,735
+*,35-44 years,Married(a),Male,*,736
+*,35-44 years,Separated,Male,*,737
+*,35-44 years,Divorced,Male,*,738
+*,35-44 years,Widowed,Male,*,739
+*,35-44 years,Never married,Male,*,740
+*,35-44 years,Married(a),Female,*,741
+*,35-44 years,Separated,Female,*,742
+*,35-44 years,Divorced,Female,*,743
+*,35-44 years,Widowed,Female,*,744
+*,35-44 years,Never married,Female,*,745
+*,45-54 years,Married(a),Male,*,746
+*,45-54 years,Separated,Male,*,747
+*,45-54 years,Divorced,Male,*,748
+*,45-54 years,Widowed,Male,*,749
+*,45-54 years,Never married,Male,*,750
+*,45-54 years,Married(a),Female,*,751
+*,45-54 years,Separated,Female,*,752
+*,45-54 years,Divorced,Female,*,753
+*,45-54 years,Widowed,Female,*,754
+*,45-54 years,Never married,Female,*,755
+*,55-64 years,Married(a),Male,*,756
+*,55-64 years,Separated,Male,*,757
+*,55-64 years,Divorced,Male,*,758
+*,55-64 years,Widowed,Male,*,759
+*,55-64 years,Never married,Male,*,760
+*,55-64 years,Married(a),Female,*,761
+*,55-64 years,Separated,Female,*,762
+*,55-64 years,Divorced,Female,*,763
+*,55-64 years,Widowed,Female,*,764
+*,55-64 years,Never married,Female,*,765
+*,65-74 years,Married(a),Male,*,766
+*,65-74 years,Separated,Male,*,767
+*,65-74 years,Divorced,Male,*,768
+*,65-74 years,Widowed,Male,*,769
+*,65-74 years,Never married,Male,*,770
+*,65-74 years,Married(a),Female,*,771
+*,65-74 years,Separated,Female,*,772
+*,65-74 years,Divorced,Female,*,773
+*,65-74 years,Widowed,Female,*,774
+*,65-74 years,Never married,Female,*,775
+*,75-84 years,Married(a),Male,*,776
+*,75-84 years,Separated,Male,*,777
+*,75-84 years,Divorced,Male,*,778
+*,75-84 years,Widowed,Male,*,779
+*,75-84 years,Never married,Male,*,780
+*,75-84 years,Married(a),Female,*,781
+*,75-84 years,Separated,Female,*,782
+*,75-84 years,Divorced,Female,*,783
+*,75-84 years,Widowed,Female,*,784
+*,75-84 years,Never married,Female,*,785
+*,85 years and over,Married(a),Male,*,786
+*,85 years and over,Separated,Male,*,787
+*,85 years and over,Divorced,Male,*,788
+*,85 years and over,Widowed,Male,*,789
+*,85 years and over,Never married,Male,*,790
+*,85 years and over,Married(a),Female,*,791
+*,85 years and over,Separated,Female,*,792
+*,85 years and over,Divorced,Female,*,793
+*,85 years and over,Widowed,Female,*,794
+*,85 years and over,Never married,Female,*,795
+2003,15-19 years,Married(a),Male,*,796
+2003,15-19 years,Separated,Male,*,797
+2002,15-19 years,Divorced,Male,*,798
+2002,15-19 years,Widowed,Male,*,799
+2001,15-19 years,Never married,Male,*,800
+2001,15-19 years,Married(a),Female,*,801
+2000,15-19 years,Separated,Female,*,802
+2000,15-19 years,Divorced,Female,*,803
+1999,15-19 years,Widowed,Female,*,804
+1999,15-19 years,Never married,Female,*,805
+1998,20-24 years,Married(a),Male,*,806
+1998,20-24 years,Separated,Male,*,807
+1997,20-24 years,Divorced,Male,*,808
+1997,20-24 years,Widowed,Male,*,809
+1996,20-24 years,Never married,Male,*,810
+1996,20-24 years,Married(a),Female,*,811
+1995,20-24 years,Separated,Female,*,812
+1995,20-24 years,Divorced,Female,*,813
+1994,20-24 years,Widowed,Female,*,814
+1994,20-24 years,Never married,Female,*,815
+1993,25-34 years,Married(a),Male,*,816
+1992,25-34 years,Separated,Male,*,817
+1991,25-34 years,Divorced,Male,*,818
+1990,25-34 years,Widowed,Male,*,819
+1989,25-34 years,Never married,Male,*,820
+1988,25-34 years,Married(a),Female,*,821
+1987,25-34 years,Separated,Female,*,822
+1986,25-34 years,Divorced,Female,*,823
+1985,25-34 years,Widowed,Female,*,824
+1984,25-34 years,Never married,Female,*,825
+1983,35-44 years,Married(a),Male,*,826
+1982,35-44 years,Separated,Male,*,827
+1981,35-44 years,Divorced,Male,*,828
+1980,35-44 years,Widowed,Male,*,829
+1979,35-44 years,Never married,Male,*,830
+1978,35-44 years,Married(a),Female,*,831
+1977,35-44 years,Separated,Female,*,832
+1976,35-44 years,Divorced,Female,*,833
+1975,35-44 years,Widowed,Female,*,834
+1974,35-44 years,Never married,Female,*,835
+1973,45-54 years,Married(a),Male,*,836
+1972,45-54 years,Separated,Male,*,837
+1971,45-54 years,Divorced,Male,*,838
+1970,45-54 years,Widowed,Male,*,839
+1969,45-54 years,Never married,Male,*,840
+1968,45-54 years,Married(a),Female,*,841
+1967,45-54 years,Separated,Female,*,842
+1966,45-54 years,Divorced,Female,*,843
+1965,45-54 years,Widowed,Female,*,844
+1964,45-54 years,Never married,Female,*,845
+1963,55-64 years,Married(a),Male,*,846
+1962,55-64 years,Separated,Male,*,847
+1961,55-64 years,Divorced,Male,*,848
+1960,55-64 years,Widowed,Male,*,849
+1959,55-64 years,Never married,Male,*,850
+1958,55-64 years,Married(a),Female,*,851
+1957,55-64 years,Separated,Female,*,852
+1956,55-64 years,Divorced,Female,*,853
+1955,55-64 years,Widowed,Female,*,854
+1954,55-64 years,Never married,Female,*,855
+1953,65-74 years,Married(a),Male,*,856
+1952,65-74 years,Separated,Male,*,857
+1951,65-74 years,Divorced,Male,*,858
+1950,65-74 years,Widowed,Male,*,859
+1949,65-74 years,Never married,Male,*,860
+1948,65-74 years,Married(a),Female,*,861
+1947,65-74 years,Separated,Female,*,862
+1946,65-74 years,Divorced,Female,*,863
+1945,65-74 years,Widowed,Female,*,864
+1944,65-74 years,Never married,Female,*,865
+1943,75-84 years,Married(a),Male,*,866
+1942,75-84 years,Separated,Male,*,867
+1941,75-84 years,Divorced,Male,*,868
+1940,75-84 years,Widowed,Male,*,869
+1939,75-84 years,Never married,Male,*,870
+1938,75-84 years,Married(a),Female,*,871
+1937,75-84 years,Separated,Female,*,872
+1936,75-84 years,Divorced,Female,*,873
+1935,75-84 years,Widowed,Female,*,874
+1934,75-84 years,Never married,Female,*,875
+1933,85 years and over,Married(a),Male,*,876
+1933,85 years and over,Separated,Male,*,877
+1932,85 years and over,Divorced,Male,*,878
+1931,85 years and over,Widowed,Male,*,879
+1930,85 years and over,Never married,Male,*,880
+1930,85 years and over,Married(a),Female,*,881
+1930,85 years and over,Separated,Female,*,882
+1929,85 years and over,Divorced,Female,*,883
+1929,85 years and over,Widowed,Female,*,884
+1928,85 years and over,Never married,Female,*,885
+*,*,*,*,Young,886
+*,*,*,*,Middle Age,887
+*,*,*,*,Old,888
+2003,*,*,*,Young,889
+2002,*,*,*,Young,890
+2001,*,*,*,Young,891
+2000,*,*,*,Young,892
+1999,*,*,*,Young,893
+1998,*,*,*,Young,894
+1997,*,*,*,Young,895
+1996,*,*,*,Young,896
+1995,*,*,*,Young,897
+1994,*,*,*,Young,898
+1993,*,*,*,Young,899
+1992,*,*,*,Young,900
+1991,*,*,*,Young,901
+1990,*,*,*,Young,902
+1989,*,*,*,Young,903
+1988,*,*,*,Young,904
+1987,*,*,*,Young,905
+1986,*,*,*,Young,906
+1985,*,*,*,Young,907
+1984,*,*,*,Young,908
+1983,*,*,*,Middle Age,909
+1982,*,*,*,Middle Age,910
+1981,*,*,*,Middle Age,911
+1980,*,*,*,Middle Age,912
+1979,*,*,*,Middle Age,913
+1978,*,*,*,Middle Age,914
+1977,*,*,*,Middle Age,915
+1976,*,*,*,Middle Age,916
+1975,*,*,*,Middle Age,917
+1974,*,*,*,Middle Age,918
+1973,*,*,*,Middle Age,919
+1972,*,*,*,Middle Age,920
+1971,*,*,*,Middle Age,921
+1970,*,*,*,Middle Age,922
+1969,*,*,*,Middle Age,923
+1968,*,*,*,Middle Age,924
+1967,*,*,*,Middle Age,925
+1966,*,*,*,Middle Age,926
+1965,*,*,*,Middle Age,927
+1964,*,*,*,Middle Age,928
+1963,*,*,*,Middle Age,929
+1962,*,*,*,Middle Age,930
+1961,*,*,*,Middle Age,931
+1960,*,*,*,Middle Age,932
+1959,*,*,*,Middle Age,933
+1958,*,*,*,Middle Age,934
+1957,*,*,*,Middle Age,935
+1956,*,*,*,Middle Age,936
+1955,*,*,*,Middle Age,937
+1954,*,*,*,Middle Age,938
+1953,*,*,*,Old,939
+1952,*,*,*,Old,940
+1951,*,*,*,Old,941
+1950,*,*,*,Old,942
+1949,*,*,*,Old,943
+1948,*,*,*,Old,944
+1947,*,*,*,Old,945
+1946,*,*,*,Old,946
+1945,*,*,*,Old,947
+1944,*,*,*,Old,948
+1943,*,*,*,Old,949
+1942,*,*,*,Old,950
+1941,*,*,*,Old,951
+1940,*,*,*,Old,952
+1939,*,*,*,Old,953
+1938,*,*,*,Old,954
+1937,*,*,*,Old,955
+1936,*,*,*,Old,956
+1935,*,*,*,Old,957
+1934,*,*,*,Old,958
+1933,*,*,*,Old,959
+1932,*,*,*,Old,960
+1931,*,*,*,Old,961
+1930,*,*,*,Old,962
+1929,*,*,*,Old,963
+1928,*,*,*,Old,964
+*,15-19 years,*,*,Young,965
+*,20-24 years,*,*,Young,966
+*,25-34 years,*,*,Young,967
+*,35-44 years,*,*,Middle Age,968
+*,45-54 years,*,*,Middle Age,969
+*,55-64 years,*,*,Middle Age,970
+*,65-74 years,*,*,Old,971
+*,75-84 years,*,*,Old,972
+*,85 years and over,*,*,Old,973
+2003,15-19 years,*,*,Young,974
+2002,15-19 years,*,*,Young,975
+2001,15-19 years,*,*,Young,976
+2000,15-19 years,*,*,Young,977
+1999,15-19 years,*,*,Young,978
+1998,20-24 years,*,*,Young,979
+1997,20-24 years,*,*,Young,980
+1996,20-24 years,*,*,Young,981
+1995,20-24 years,*,*,Young,982
+1994,20-24 years,*,*,Young,983
+1993,25-34 years,*,*,Young,984
+1992,25-34 years,*,*,Young,985
+1991,25-34 years,*,*,Young,986
+1990,25-34 years,*,*,Young,987
+1989,25-34 years,*,*,Young,988
+1988,25-34 years,*,*,Young,989
+1987,25-34 years,*,*,Young,990
+1986,25-34 years,*,*,Young,991
+1985,25-34 years,*,*,Young,992
+1984,25-34 years,*,*,Young,993
+1983,35-44 years,*,*,Middle Age,994
+1982,35-44 years,*,*,Middle Age,995
+1981,35-44 years,*,*,Middle Age,996
+1980,35-44 years,*,*,Middle Age,997
+1979,35-44 years,*,*,Middle Age,998
+1978,35-44 years,*,*,Middle Age,999
+1977,35-44 years,*,*,Middle Age,1000
+1976,35-44 years,*,*,Middle Age,1001
+1975,35-44 years,*,*,Middle Age,1002
+1974,35-44 years,*,*,Middle Age,1003
+1973,45-54 years,*,*,Middle Age,1004
+1972,45-54 years,*,*,Middle Age,1005
+1971,45-54 years,*,*,Middle Age,1006
+1970,45-54 years,*,*,Middle Age,1007
+1969,45-54 years,*,*,Middle Age,1008
+1968,45-54 years,*,*,Middle Age,1009
+1967,45-54 years,*,*,Middle Age,1010
+1966,45-54 years,*,*,Middle Age,1011
+1965,45-54 years,*,*,Middle Age,1012
+1964,45-54 years,*,*,Middle Age,1013
+1963,55-64 years,*,*,Middle Age,1014
+1962,55-64 years,*,*,Middle Age,1015
+1961,55-64 years,*,*,Middle Age,1016
+1960,55-64 years,*,*,Middle Age,1017
+1959,55-64 years,*,*,Middle Age,1018
+1958,55-64 years,*,*,Middle Age,1019
+1957,55-64 years,*,*,Middle Age,1020
+1956,55-64 years,*,*,Middle Age,1021
+1955,55-64 years,*,*,Middle Age,1022
+1954,55-64 years,*,*,Middle Age,1023
+1953,65-74 years,*,*,Old,1024
+1952,65-74 years,*,*,Old,1025
+1951,65-74 years,*,*,Old,1026
+1950,65-74 years,*,*,Old,1027
+1949,65-74 years,*,*,Old,1028
+1948,65-74 years,*,*,Old,1029
+1947,65-74 years,*,*,Old,1030
+1946,65-74 years,*,*,Old,1031
+1945,65-74 years,*,*,Old,1032
+1944,65-74 years,*,*,Old,1033
+1943,75-84 years,*,*,Old,1034
+1942,75-84 years,*,*,Old,1035
+1941,75-84 years,*,*,Old,1036
+1940,75-84 years,*,*,Old,1037
+1939,75-84 years,*,*,Old,1038
+1938,75-84 years,*,*,Old,1039
+1937,75-84 years,*,*,Old,1040
+1936,75-84 years,*,*,Old,1041
+1935,75-84 years,*,*,Old,1042
+1934,75-84 years,*,*,Old,1043
+1933,85 years and over,*,*,Old,1044
+1932,85 years and over,*,*,Old,1045
+1931,85 years and over,*,*,Old,1046
+1930,85 years and over,*,*,Old,1047
+1929,85 years and over,*,*,Old,1048
+1928,85 years and over,*,*,Old,1049
+*,*,Married(a),*,Young,1050
+*,*,Separated,*,Young,1051
+*,*,Divorced,*,Young,1052
+*,*,Widowed,*,Young,1053
+*,*,Never married,*,Young,1054
+*,*,Married(a),*,Middle Age,1055
+*,*,Separated,*,Middle Age,1056
+*,*,Divorced,*,Middle Age,1057
+*,*,Widowed,*,Middle Age,1058
+*,*,Never married,*,Middle Age,1059
+*,*,Married(a),*,Old,1060
+*,*,Separated,*,Old,1061
+*,*,Divorced,*,Old,1062
+*,*,Widowed,*,Old,1063
+*,*,Never married,*,Old,1064
+2003,*,Married(a),*,Young,1065
+2003,*,Separated,*,Young,1066
+2002,*,Divorced,*,Young,1067
+2002,*,Widowed,*,Young,1068
+2001,*,Never married,*,Young,1069
+2001,*,Married(a),*,Young,1070
+2000,*,Separated,*,Young,1071
+2000,*,Divorced,*,Young,1072
+1999,*,Widowed,*,Young,1073
+1999,*,Never married,*,Young,1074
+1998,*,Married(a),*,Young,1075
+1998,*,Separated,*,Young,1076
+1997,*,Divorced,*,Young,1077
+1997,*,Widowed,*,Young,1078
+1996,*,Never married,*,Young,1079
+1996,*,Married(a),*,Young,1080
+1995,*,Separated,*,Young,1081
+1995,*,Divorced,*,Young,1082
+1994,*,Widowed,*,Young,1083
+1994,*,Never married,*,Young,1084
+1993,*,Married(a),*,Young,1085
+1992,*,Separated,*,Young,1086
+1991,*,Divorced,*,Young,1087
+1990,*,Widowed,*,Young,1088
+1989,*,Never married,*,Young,1089
+1988,*,Married(a),*,Young,1090
+1987,*,Separated,*,Young,1091
+1986,*,Divorced,*,Young,1092
+1985,*,Widowed,*,Young,1093
+1984,*,Never married,*,Young,1094
+1983,*,Married(a),*,Middle Age,1095
+1982,*,Separated,*,Middle Age,1096
+1981,*,Divorced,*,Middle Age,1097
+1980,*,Widowed,*,Middle Age,1098
+1979,*,Never married,*,Middle Age,1099
+1978,*,Married(a),*,Middle Age,1100
+1977,*,Separated,*,Middle Age,1101
+1976,*,Divorced,*,Middle Age,1102
+1975,*,Widowed,*,Middle Age,1103
+1974,*,Never married,*,Middle Age,1104
+1973,*,Married(a),*,Middle Age,1105
+1972,*,Separated,*,Middle Age,1106
+1971,*,Divorced,*,Middle Age,1107
+1970,*,Widowed,*,Middle Age,1108
+1969,*,Never married,*,Middle Age,1109
+1968,*,Married(a),*,Middle Age,1110
+1967,*,Separated,*,Middle Age,1111
+1966,*,Divorced,*,Middle Age,1112
+1965,*,Widowed,*,Middle Age,1113
+1964,*,Never married,*,Middle Age,1114
+1963,*,Married(a),*,Middle Age,1115
+1962,*,Separated,*,Middle Age,1116
+1961,*,Divorced,*,Middle Age,1117
+1960,*,Widowed,*,Middle Age,1118
+1959,*,Never married,*,Middle Age,1119
+1958,*,Married(a),*,Middle Age,1120
+1957,*,Separated,*,Middle Age,1121
+1956,*,Divorced,*,Middle Age,1122
+1955,*,Widowed,*,Middle Age,1123
+1954,*,Never married,*,Middle Age,1124
+1953,*,Married(a),*,Old,1125
+1952,*,Separated,*,Old,1126
+1951,*,Divorced,*,Old,1127
+1950,*,Widowed,*,Old,1128
+1949,*,Never married,*,Old,1129
+1948,*,Married(a),*,Old,1130
+1947,*,Separated,*,Old,1131
+1946,*,Divorced,*,Old,1132
+1945,*,Widowed,*,Old,1133
+1944,*,Never married,*,Old,1134
+1943,*,Married(a),*,Old,1135
+1942,*,Separated,*,Old,1136
+1941,*,Divorced,*,Old,1137
+1940,*,Widowed,*,Old,1138
+1939,*,Never married,*,Old,1139
+1938,*,Married(a),*,Old,1140
+1937,*,Separated,*,Old,1141
+1936,*,Divorced,*,Old,1142
+1935,*,Widowed,*,Old,1143
+1934,*,Never married,*,Old,1144
+1933,*,Married(a),*,Old,1145
+1933,*,Separated,*,Old,1146
+1932,*,Divorced,*,Old,1147
+1931,*,Widowed,*,Old,1148
+1930,*,Never married,*,Old,1149
+1930,*,Married(a),*,Old,1150
+1930,*,Separated,*,Old,1151
+1929,*,Divorced,*,Old,1152
+1929,*,Widowed,*,Old,1153
+1928,*,Never married,*,Old,1154
+*,15-19 years,Married(a),*,Young,1155
+*,15-19 years,Separated,*,Young,1156
+*,15-19 years,Divorced,*,Young,1157
+*,15-19 years,Widowed,*,Young,1158
+*,15-19 years,Never married,*,Young,1159
+*,20-24 years,Married(a),*,Young,1160
+*,20-24 years,Separated,*,Young,1161
+*,20-24 years,Divorced,*,Young,1162
+*,20-24 years,Widowed,*,Young,1163
+*,20-24 years,Never married,*,Young,1164
+*,25-34 years,Married(a),*,Young,1165
+*,25-34 years,Separated,*,Young,1166
+*,25-34 years,Divorced,*,Young,1167
+*,25-34 years,Widowed,*,Young,1168
+*,25-34 years,Never married,*,Young,1169
+*,35-44 years,Married(a),*,Middle Age,1170
+*,35-44 years,Separated,*,Middle Age,1171
+*,35-44 years,Divorced,*,Middle Age,1172
+*,35-44 years,Widowed,*,Middle Age,1173
+*,35-44 years,Never married,*,Middle Age,1174
+*,45-54 years,Married(a),*,Middle Age,1175
+*,45-54 years,Separated,*,Middle Age,1176
+*,45-54 years,Divorced,*,Middle Age,1177
+*,45-54 years,Widowed,*,Middle Age,1178
+*,45-54 years,Never married,*,Middle Age,1179
+*,55-64 years,Married(a),*,Middle Age,1180
+*,55-64 years,Separated,*,Middle Age,1181
+*,55-64 years,Divorced,*,Middle Age,1182
+*,55-64 years,Widowed,*,Middle Age,1183
+*,55-64 years,Never married,*,Middle Age,1184
+*,65-74 years,Married(a),*,Old,1185
+*,65-74 years,Separated,*,Old,1186
+*,65-74 years,Divorced,*,Old,1187
+*,65-74 years,Widowed,*,Old,1188
+*,65-74 years,Never married,*,Old,1189
+*,75-84 years,Married(a),*,Old,1190
+*,75-84 years,Separated,*,Old,1191
+*,75-84 years,Divorced,*,Old,1192
+*,75-84 years,Widowed,*,Old,1193
+*,75-84 years,Never married,*,Old,1194
+*,85 years and over,Married(a),*,Old,1195
+*,85 years and over,Separated,*,Old,1196
+*,85 years and over,Divorced,*,Old,1197
+*,85 years and over,Widowed,*,Old,1198
+*,85 years and over,Never married,*,Old,1199
+2003,15-19 years,Married(a),*,Young,1200
+2003,15-19 years,Separated,*,Young,1201
+2002,15-19 years,Divorced,*,Young,1202
+2002,15-19 years,Widowed,*,Young,1203
+2001,15-19 years,Never married,*,Young,1204
+2001,15-19 years,Married(a),*,Young,1205
+2000,15-19 years,Separated,*,Young,1206
+2000,15-19 years,Divorced,*,Young,1207
+1999,15-19 years,Widowed,*,Young,1208
+1999,15-19 years,Never married,*,Young,1209
+1998,20-24 years,Married(a),*,Young,1210
+1998,20-24 years,Separated,*,Young,1211
+1997,20-24 years,Divorced,*,Young,1212
+1997,20-24 years,Widowed,*,Young,1213
+1996,20-24 years,Never married,*,Young,1214
+1996,20-24 years,Married(a),*,Young,1215
+1995,20-24 years,Separated,*,Young,1216
+1995,20-24 years,Divorced,*,Young,1217
+1994,20-24 years,Widowed,*,Young,1218
+1994,20-24 years,Never married,*,Young,1219
+1993,25-34 years,Married(a),*,Young,1220
+1992,25-34 years,Separated,*,Young,1221
+1991,25-34 years,Divorced,*,Young,1222
+1990,25-34 years,Widowed,*,Young,1223
+1989,25-34 years,Never married,*,Young,1224
+1988,25-34 years,Married(a),*,Young,1225
+1987,25-34 years,Separated,*,Young,1226
+1986,25-34 years,Divorced,*,Young,1227
+1985,25-34 years,Widowed,*,Young,1228
+1984,25-34 years,Never married,*,Young,1229
+1983,35-44 years,Married(a),*,Middle Age,1230
+1982,35-44 years,Separated,*,Middle Age,1231
+1981,35-44 years,Divorced,*,Middle Age,1232
+1980,35-44 years,Widowed,*,Middle Age,1233
+1979,35-44 years,Never married,*,Middle Age,1234
+1978,35-44 years,Married(a),*,Middle Age,1235
+1977,35-44 years,Separated,*,Middle Age,1236
+1976,35-44 years,Divorced,*,Middle Age,1237
+1975,35-44 years,Widowed,*,Middle Age,1238
+1974,35-44 years,Never married,*,Middle Age,1239
+1973,45-54 years,Married(a),*,Middle Age,1240
+1972,45-54 years,Separated,*,Middle Age,1241
+1971,45-54 years,Divorced,*,Middle Age,1242
+1970,45-54 years,Widowed,*,Middle Age,1243
+1969,45-54 years,Never married,*,Middle Age,1244
+1968,45-54 years,Married(a),*,Middle Age,1245
+1967,45-54 years,Separated,*,Middle Age,1246
+1966,45-54 years,Divorced,*,Middle Age,1247
+1965,45-54 years,Widowed,*,Middle Age,1248
+1964,45-54 years,Never married,*,Middle Age,1249
+1963,55-64 years,Married(a),*,Middle Age,1250
+1962,55-64 years,Separated,*,Middle Age,1251
+1961,55-64 years,Divorced,*,Middle Age,1252
+1960,55-64 years,Widowed,*,Middle Age,1253
+1959,55-64 years,Never married,*,Middle Age,1254
+1958,55-64 years,Married(a),*,Middle Age,1255
+1957,55-64 years,Separated,*,Middle Age,1256
+1956,55-64 years,Divorced,*,Middle Age,1257
+1955,55-64 years,Widowed,*,Middle Age,1258
+1954,55-64 years,Never married,*,Middle Age,1259
+1953,65-74 years,Married(a),*,Old,1260
+1952,65-74 years,Separated,*,Old,1261
+1951,65-74 years,Divorced,*,Old,1262
+1950,65-74 years,Widowed,*,Old,1263
+1949,65-74 years,Never married,*,Old,1264
+1948,65-74 years,Married(a),*,Old,1265
+1947,65-74 years,Separated,*,Old,1266
+1946,65-74 years,Divorced,*,Old,1267
+1945,65-74 years,Widowed,*,Old,1268
+1944,65-74 years,Never married,*,Old,1269
+1943,75-84 years,Married(a),*,Old,1270
+1942,75-84 years,Separated,*,Old,1271
+1941,75-84 years,Divorced,*,Old,1272
+1940,75-84 years,Widowed,*,Old,1273
+1939,75-84 years,Never married,*,Old,1274
+1938,75-84 years,Married(a),*,Old,1275
+1937,75-84 years,Separated,*,Old,1276
+1936,75-84 years,Divorced,*,Old,1277
+1935,75-84 years,Widowed,*,Old,1278
+1934,75-84 years,Never married,*,Old,1279
+1933,85 years and over,Married(a),*,Old,1280
+1933,85 years and over,Separated,*,Old,1281
+1932,85 years and over,Divorced,*,Old,1282
+1931,85 years and over,Widowed,*,Old,1283
+1930,85 years and over,Never married,*,Old,1284
+1930,85 years and over,Married(a),*,Old,1285
+1930,85 years and over,Separated,*,Old,1286
+1929,85 years and over,Divorced,*,Old,1287
+1929,85 years and over,Widowed,*,Old,1288
+1928,85 years and over,Never married,*,Old,1289
+*,*,*,Male,Young,1290
+*,*,*,Female,Young,1291
+*,*,*,Male,Middle Age,1292
+*,*,*,Female,Middle Age,1293
+*,*,*,Male,Old,1294
+*,*,*,Female,Old,1295
+2003,*,*,Male,Young,1296
+2002,*,*,Male,Young,1297
+2001,*,*,Male,Young,1298
+2001,*,*,Female,Young,1299
+2000,*,*,Female,Young,1300
+1999,*,*,Female,Young,1301
+1998,*,*,Male,Young,1302
+1997,*,*,Male,Young,1303
+1996,*,*,Male,Young,1304
+1996,*,*,Female,Young,1305
+1995,*,*,Female,Young,1306
+1994,*,*,Female,Young,1307
+1993,*,*,Male,Young,1308
+1992,*,*,Male,Young,1309
+1991,*,*,Male,Young,1310
+1990,*,*,Male,Young,1311
+1989,*,*,Male,Young,1312
+1988,*,*,Female,Young,1313
+1987,*,*,Female,Young,1314
+1986,*,*,Female,Young,1315
+1985,*,*,Female,Young,1316
+1984,*,*,Female,Young,1317
+1983,*,*,Male,Middle Age,1318
+1982,*,*,Male,Middle Age,1319
+1981,*,*,Male,Middle Age,1320
+1980,*,*,Male,Middle Age,1321
+1979,*,*,Male,Middle Age,1322
+1978,*,*,Female,Middle Age,1323
+1977,*,*,Female,Middle Age,1324
+1976,*,*,Female,Middle Age,1325
+1975,*,*,Female,Middle Age,1326
+1974,*,*,Female,Middle Age,1327
+1973,*,*,Male,Middle Age,1328
+1972,*,*,Male,Middle Age,1329
+1971,*,*,Male,Middle Age,1330
+1970,*,*,Male,Middle Age,1331
+1969,*,*,Male,Middle Age,1332
+1968,*,*,Female,Middle Age,1333
+1967,*,*,Female,Middle Age,1334
+1966,*,*,Female,Middle Age,1335
+1965,*,*,Female,Middle Age,1336
+1964,*,*,Female,Middle Age,1337
+1963,*,*,Male,Middle Age,1338
+1962,*,*,Male,Middle Age,1339
+1961,*,*,Male,Middle Age,1340
+1960,*,*,Male,Middle Age,1341
+1959,*,*,Male,Middle Age,1342
+1958,*,*,Female,Middle Age,1343
+1957,*,*,Female,Middle Age,1344
+1956,*,*,Female,Middle Age,1345
+1955,*,*,Female,Middle Age,1346
+1954,*,*,Female,Middle Age,1347
+1953,*,*,Male,Old,1348
+1952,*,*,Male,Old,1349
+1951,*,*,Male,Old,1350
+1950,*,*,Male,Old,1351
+1949,*,*,Male,Old,1352
+1948,*,*,Female,Old,1353
+1947,*,*,Female,Old,1354
+1946,*,*,Female,Old,1355
+1945,*,*,Female,Old,1356
+1944,*,*,Female,Old,1357
+1943,*,*,Male,Old,1358
+1942,*,*,Male,Old,1359
+1941,*,*,Male,Old,1360
+1940,*,*,Male,Old,1361
+1939,*,*,Male,Old,1362
+1938,*,*,Female,Old,1363
+1937,*,*,Female,Old,1364
+1936,*,*,Female,Old,1365
+1935,*,*,Female,Old,1366
+1934,*,*,Female,Old,1367
+1933,*,*,Male,Old,1368
+1932,*,*,Male,Old,1369
+1931,*,*,Male,Old,1370
+1930,*,*,Male,Old,1371
+1930,*,*,Female,Old,1372
+1929,*,*,Female,Old,1373
+1928,*,*,Female,Old,1374
+*,15-19 years,*,Male,Young,1375
+*,15-19 years,*,Female,Young,1376
+*,20-24 years,*,Male,Young,1377
+*,20-24 years,*,Female,Young,1378
+*,25-34 years,*,Male,Young,1379
+*,25-34 years,*,Female,Young,1380
+*,35-44 years,*,Male,Middle Age,1381
+*,35-44 years,*,Female,Middle Age,1382
+*,45-54 years,*,Male,Middle Age,1383
+*,45-54 years,*,Female,Middle Age,1384
+*,55-64 years,*,Male,Middle Age,1385
+*,55-64 years,*,Female,Middle Age,1386
+*,65-74 years,*,Male,Old,1387
+*,65-74 years,*,Female,Old,1388
+*,75-84 years,*,Male,Old,1389
+*,75-84 years,*,Female,Old,1390
+*,85 years and over,*,Male,Old,1391
+*,85 years and over,*,Female,Old,1392
+2003,15-19 years,*,Male,Young,1393
+2002,15-19 years,*,Male,Young,1394
+2001,15-19 years,*,Male,Young,1395
+2001,15-19 years,*,Female,Young,1396
+2000,15-19 years,*,Female,Young,1397
+1999,15-19 years,*,Female,Young,1398
+1998,20-24 years,*,Male,Young,1399
+1997,20-24 years,*,Male,Young,1400
+1996,20-24 years,*,Male,Young,1401
+1996,20-24 years,*,Female,Young,1402
+1995,20-24 years,*,Female,Young,1403
+1994,20-24 years,*,Female,Young,1404
+1993,25-34 years,*,Male,Young,1405
+1992,25-34 years,*,Male,Young,1406
+1991,25-34 years,*,Male,Young,1407
+1990,25-34 years,*,Male,Young,1408
+1989,25-34 years,*,Male,Young,1409
+1988,25-34 years,*,Female,Young,1410
+1987,25-34 years,*,Female,Young,1411
+1986,25-34 years,*,Female,Young,1412
+1985,25-34 years,*,Female,Young,1413
+1984,25-34 years,*,Female,Young,1414
+1983,35-44 years,*,Male,Middle Age,1415
+1982,35-44 years,*,Male,Middle Age,1416
+1981,35-44 years,*,Male,Middle Age,1417
+1980,35-44 years,*,Male,Middle Age,1418
+1979,35-44 years,*,Male,Middle Age,1419
+1978,35-44 years,*,Female,Middle Age,1420
+1977,35-44 years,*,Female,Middle Age,1421
+1976,35-44 years,*,Female,Middle Age,1422
+1975,35-44 years,*,Female,Middle Age,1423
+1974,35-44 years,*,Female,Middle Age,1424
+1973,45-54 years,*,Male,Middle Age,1425
+1972,45-54 years,*,Male,Middle Age,1426
+1971,45-54 years,*,Male,Middle Age,1427
+1970,45-54 years,*,Male,Middle Age,1428
+1969,45-54 years,*,Male,Middle Age,1429
+1968,45-54 years,*,Female,Middle Age,1430
+1967,45-54 years,*,Female,Middle Age,1431
+1966,45-54 years,*,Female,Middle Age,1432
+1965,45-54 years,*,Female,Middle Age,1433
+1964,45-54 years,*,Female,Middle Age,1434
+1963,55-64 years,*,Male,Middle Age,1435
+1962,55-64 years,*,Male,Middle Age,1436
+1961,55-64 years,*,Male,Middle Age,1437
+1960,55-64 years,*,Male,Middle Age,1438
+1959,55-64 years,*,Male,Middle Age,1439
+1958,55-64 years,*,Female,Middle Age,1440
+1957,55-64 years,*,Female,Middle Age,1441
+1956,55-64 years,*,Female,Middle Age,1442
+1955,55-64 years,*,Female,Middle Age,1443
+1954,55-64 years,*,Female,Middle Age,1444
+1953,65-74 years,*,Male,Old,1445
+1952,65-74 years,*,Male,Old,1446
+1951,65-74 years,*,Male,Old,1447
+1950,65-74 years,*,Male,Old,1448
+1949,65-74 years,*,Male,Old,1449
+1948,65-74 years,*,Female,Old,1450
+1947,65-74 years,*,Female,Old,1451
+1946,65-74 years,*,Female,Old,1452
+1945,65-74 years,*,Female,Old,1453
+1944,65-74 years,*,Female,Old,1454
+1943,75-84 years,*,Male,Old,1455
+1942,75-84 years,*,Male,Old,1456
+1941,75-84 years,*,Male,Old,1457
+1940,75-84 years,*,Male,Old,1458
+1939,75-84 years,*,Male,Old,1459
+1938,75-84 years,*,Female,Old,1460
+1937,75-84 years,*,Female,Old,1461
+1936,75-84 years,*,Female,Old,1462
+1935,75-84 years,*,Female,Old,1463
+1934,75-84 years,*,Female,Old,1464
+1933,85 years and over,*,Male,Old,1465
+1932,85 years and over,*,Male,Old,1466
+1931,85 years and over,*,Male,Old,1467
+1930,85 years and over,*,Male,Old,1468
+1930,85 years and over,*,Female,Old,1469
+1929,85 years and over,*,Female,Old,1470
+1928,85 years and over,*,Female,Old,1471
+*,*,Married(a),Male,Young,1472
+*,*,Separated,Male,Young,1473
+*,*,Divorced,Male,Young,1474
+*,*,Widowed,Male,Young,1475
+*,*,Never married,Male,Young,1476
+*,*,Married(a),Female,Young,1477
+*,*,Separated,Female,Young,1478
+*,*,Divorced,Female,Young,1479
+*,*,Widowed,Female,Young,1480
+*,*,Never married,Female,Young,1481
+*,*,Married(a),Male,Middle Age,1482
+*,*,Separated,Male,Middle Age,1483
+*,*,Divorced,Male,Middle Age,1484
+*,*,Widowed,Male,Middle Age,1485
+*,*,Never married,Male,Middle Age,1486
+*,*,Married(a),Female,Middle Age,1487
+*,*,Separated,Female,Middle Age,1488
+*,*,Divorced,Female,Middle Age,1489
+*,*,Widowed,Female,Middle Age,1490
+*,*,Never married,Female,Middle Age,1491
+*,*,Married(a),Male,Old,1492
+*,*,Separated,Male,Old,1493
+*,*,Divorced,Male,Old,1494
+*,*,Widowed,Male,Old,1495
+*,*,Never married,Male,Old,1496
+*,*,Married(a),Female,Old,1497
+*,*,Separated,Female,Old,1498
+*,*,Divorced,Female,Old,1499
+*,*,Widowed,Female,Old,1500
+*,*,Never married,Female,Old,1501
+2003,*,Married(a),Male,Young,1502
+2003,*,Separated,Male,Young,1503
+2002,*,Divorced,Male,Young,1504
+2002,*,Widowed,Male,Young,1505
+2001,*,Never married,Male,Young,1506
+2001,*,Married(a),Female,Young,1507
+2000,*,Separated,Female,Young,1508
+2000,*,Divorced,Female,Young,1509
+1999,*,Widowed,Female,Young,1510
+1999,*,Never married,Female,Young,1511
+1998,*,Married(a),Male,Young,1512
+1998,*,Separated,Male,Young,1513
+1997,*,Divorced,Male,Young,1514
+1997,*,Widowed,Male,Young,1515
+1996,*,Never married,Male,Young,1516
+1996,*,Married(a),Female,Young,1517
+1995,*,Separated,Female,Young,1518
+1995,*,Divorced,Female,Young,1519
+1994,*,Widowed,Female,Young,1520
+1994,*,Never married,Female,Young,1521
+1993,*,Married(a),Male,Young,1522
+1992,*,Separated,Male,Young,1523
+1991,*,Divorced,Male,Young,1524
+1990,*,Widowed,Male,Young,1525
+1989,*,Never married,Male,Young,1526
+1988,*,Married(a),Female,Young,1527
+1987,*,Separated,Female,Young,1528
+1986,*,Divorced,Female,Young,1529
+1985,*,Widowed,Female,Young,1530
+1984,*,Never married,Female,Young,1531
+1983,*,Married(a),Male,Middle Age,1532
+1982,*,Separated,Male,Middle Age,1533
+1981,*,Divorced,Male,Middle Age,1534
+1980,*,Widowed,Male,Middle Age,1535
+1979,*,Never married,Male,Middle Age,1536
+1978,*,Married(a),Female,Middle Age,1537
+1977,*,Separated,Female,Middle Age,1538
+1976,*,Divorced,Female,Middle Age,1539
+1975,*,Widowed,Female,Middle Age,1540
+1974,*,Never married,Female,Middle Age,1541
+1973,*,Married(a),Male,Middle Age,1542
+1972,*,Separated,Male,Middle Age,1543
+1971,*,Divorced,Male,Middle Age,1544
+1970,*,Widowed,Male,Middle Age,1545
+1969,*,Never married,Male,Middle Age,1546
+1968,*,Married(a),Female,Middle Age,1547
+1967,*,Separated,Female,Middle Age,1548
+1966,*,Divorced,Female,Middle Age,1549
+1965,*,Widowed,Female,Middle Age,1550
+1964,*,Never married,Female,Middle Age,1551
+1963,*,Married(a),Male,Middle Age,1552
+1962,*,Separated,Male,Middle Age,1553
+1961,*,Divorced,Male,Middle Age,1554
+1960,*,Widowed,Male,Middle Age,1555
+1959,*,Never married,Male,Middle Age,1556
+1958,*,Married(a),Female,Middle Age,1557
+1957,*,Separated,Female,Middle Age,1558
+1956,*,Divorced,Female,Middle Age,1559
+1955,*,Widowed,Female,Middle Age,1560
+1954,*,Never married,Female,Middle Age,1561
+1953,*,Married(a),Male,Old,1562
+1952,*,Separated,Male,Old,1563
+1951,*,Divorced,Male,Old,1564
+1950,*,Widowed,Male,Old,1565
+1949,*,Never married,Male,Old,1566
+1948,*,Married(a),Female,Old,1567
+1947,*,Separated,Female,Old,1568
+1946,*,Divorced,Female,Old,1569
+1945,*,Widowed,Female,Old,1570
+1944,*,Never married,Female,Old,1571
+1943,*,Married(a),Male,Old,1572
+1942,*,Separated,Male,Old,1573
+1941,*,Divorced,Male,Old,1574
+1940,*,Widowed,Male,Old,1575
+1939,*,Never married,Male,Old,1576
+1938,*,Married(a),Female,Old,1577
+1937,*,Separated,Female,Old,1578
+1936,*,Divorced,Female,Old,1579
+1935,*,Widowed,Female,Old,1580
+1934,*,Never married,Female,Old,1581
+1933,*,Married(a),Male,Old,1582
+1933,*,Separated,Male,Old,1583
+1932,*,Divorced,Male,Old,1584
+1931,*,Widowed,Male,Old,1585
+1930,*,Never married,Male,Old,1586
+1930,*,Married(a),Female,Old,1587
+1930,*,Separated,Female,Old,1588
+1929,*,Divorced,Female,Old,1589
+1929,*,Widowed,Female,Old,1590
+1928,*,Never married,Female,Old,1591
+*,15-19 years,Married(a),Male,Young,1592
+*,15-19 years,Separated,Male,Young,1593
+*,15-19 years,Divorced,Male,Young,1594
+*,15-19 years,Widowed,Male,Young,1595
+*,15-19 years,Never married,Male,Young,1596
+*,15-19 years,Married(a),Female,Young,1597
+*,15-19 years,Separated,Female,Young,1598
+*,15-19 years,Divorced,Female,Young,1599
+*,15-19 years,Widowed,Female,Young,1600
+*,15-19 years,Never married,Female,Young,1601
+*,20-24 years,Married(a),Male,Young,1602
+*,20-24 years,Separated,Male,Young,1603
+*,20-24 years,Divorced,Male,Young,1604
+*,20-24 years,Widowed,Male,Young,1605
+*,20-24 years,Never married,Male,Young,1606
+*,20-24 years,Married(a),Female,Young,1607
+*,20-24 years,Separated,Female,Young,1608
+*,20-24 years,Divorced,Female,Young,1609
+*,20-24 years,Widowed,Female,Young,1610
+*,20-24 years,Never married,Female,Young,1611
+*,25-34 years,Married(a),Male,Young,1612
+*,25-34 years,Separated,Male,Young,1613
+*,25-34 years,Divorced,Male,Young,1614
+*,25-34 years,Widowed,Male,Young,1615
+*,25-34 years,Never married,Male,Young,1616
+*,25-34 years,Married(a),Female,Young,1617
+*,25-34 years,Separated,Female,Young,1618
+*,25-34 years,Divorced,Female,Young,1619
+*,25-34 years,Widowed,Female,Young,1620
+*,25-34 years,Never married,Female,Young,1621
+*,35-44 years,Married(a),Male,Middle Age,1622
+*,35-44 years,Separated,Male,Middle Age,1623
+*,35-44 years,Divorced,Male,Middle Age,1624
+*,35-44 years,Widowed,Male,Middle Age,1625
+*,35-44 years,Never married,Male,Middle Age,1626
+*,35-44 years,Married(a),Female,Middle Age,1627
+*,35-44 years,Separated,Female,Middle Age,1628
+*,35-44 years,Divorced,Female,Middle Age,1629
+*,35-44 years,Widowed,Female,Middle Age,1630
+*,35-44 years,Never married,Female,Middle Age,1631
+*,45-54 years,Married(a),Male,Middle Age,1632
+*,45-54 years,Separated,Male,Middle Age,1633
+*,45-54 years,Divorced,Male,Middle Age,1634
+*,45-54 years,Widowed,Male,Middle Age,1635
+*,45-54 years,Never married,Male,Middle Age,1636
+*,45-54 years,Married(a),Female,Middle Age,1637
+*,45-54 years,Separated,Female,Middle Age,1638
+*,45-54 years,Divorced,Female,Middle Age,1639
+*,45-54 years,Widowed,Female,Middle Age,1640
+*,45-54 years,Never married,Female,Middle Age,1641
+*,55-64 years,Married(a),Male,Middle Age,1642
+*,55-64 years,Separated,Male,Middle Age,1643
+*,55-64 years,Divorced,Male,Middle Age,1644
+*,55-64 years,Widowed,Male,Middle Age,1645
+*,55-64 years,Never married,Male,Middle Age,1646
+*,55-64 years,Married(a),Female,Middle Age,1647
+*,55-64 years,Separated,Female,Middle Age,1648
+*,55-64 years,Divorced,Female,Middle Age,1649
+*,55-64 years,Widowed,Female,Middle Age,1650
+*,55-64 years,Never married,Female,Middle Age,1651
+*,65-74 years,Married(a),Male,Old,1652
+*,65-74 years,Separated,Male,Old,1653
+*,65-74 years,Divorced,Male,Old,1654
+*,65-74 years,Widowed,Male,Old,1655
+*,65-74 years,Never married,Male,Old,1656
+*,65-74 years,Married(a),Female,Old,1657
+*,65-74 years,Separated,Female,Old,1658
+*,65-74 years,Divorced,Female,Old,1659
+*,65-74 years,Widowed,Female,Old,1660
+*,65-74 years,Never married,Female,Old,1661
+*,75-84 years,Married(a),Male,Old,1662
+*,75-84 years,Separated,Male,Old,1663
+*,75-84 years,Divorced,Male,Old,1664
+*,75-84 years,Widowed,Male,Old,1665
+*,75-84 years,Never married,Male,Old,1666
+*,75-84 years,Married(a),Female,Old,1667
+*,75-84 years,Separated,Female,Old,1668
+*,75-84 years,Divorced,Female,Old,1669
+*,75-84 years,Widowed,Female,Old,1670
+*,75-84 years,Never married,Female,Old,1671
+*,85 years and over,Married(a),Male,Old,1672
+*,85 years and over,Separated,Male,Old,1673
+*,85 years and over,Divorced,Male,Old,1674
+*,85 years and over,Widowed,Male,Old,1675
+*,85 years and over,Never married,Male,Old,1676
+*,85 years and over,Married(a),Female,Old,1677
+*,85 years and over,Separated,Female,Old,1678
+*,85 years and over,Divorced,Female,Old,1679
+*,85 years and over,Widowed,Female,Old,1680
+*,85 years and over,Never married,Female,Old,1681
+2003,15-19 years,Married(a),Male,Young,1682
+2003,15-19 years,Separated,Male,Young,1683
+2002,15-19 years,Divorced,Male,Young,1684
+2002,15-19 years,Widowed,Male,Young,1685
+2001,15-19 years,Never married,Male,Young,1686
+2001,15-19 years,Married(a),Female,Young,1687
+2000,15-19 years,Separated,Female,Young,1688
+2000,15-19 years,Divorced,Female,Young,1689
+1999,15-19 years,Widowed,Female,Young,1690
+1999,15-19 years,Never married,Female,Young,1691
+1998,20-24 years,Married(a),Male,Young,1692
+1998,20-24 years,Separated,Male,Young,1693
+1997,20-24 years,Divorced,Male,Young,1694
+1997,20-24 years,Widowed,Male,Young,1695
+1996,20-24 years,Never married,Male,Young,1696
+1996,20-24 years,Married(a),Female,Young,1697
+1995,20-24 years,Separated,Female,Young,1698
+1995,20-24 years,Divorced,Female,Young,1699
+1994,20-24 years,Widowed,Female,Young,1700
+1994,20-24 years,Never married,Female,Young,1701
+1993,25-34 years,Married(a),Male,Young,1702
+1992,25-34 years,Separated,Male,Young,1703
+1991,25-34 years,Divorced,Male,Young,1704
+1990,25-34 years,Widowed,Male,Young,1705
+1989,25-34 years,Never married,Male,Young,1706
+1988,25-34 years,Married(a),Female,Young,1707
+1987,25-34 years,Separated,Female,Young,1708
+1986,25-34 years,Divorced,Female,Young,1709
+1985,25-34 years,Widowed,Female,Young,1710
+1984,25-34 years,Never married,Female,Young,1711
+1983,35-44 years,Married(a),Male,Middle Age,1712
+1982,35-44 years,Separated,Male,Middle Age,1713
+1981,35-44 years,Divorced,Male,Middle Age,1714
+1980,35-44 years,Widowed,Male,Middle Age,1715
+1979,35-44 years,Never married,Male,Middle Age,1716
+1978,35-44 years,Married(a),Female,Middle Age,1717
+1977,35-44 years,Separated,Female,Middle Age,1718
+1976,35-44 years,Divorced,Female,Middle Age,1719
+1975,35-44 years,Widowed,Female,Middle Age,1720
+1974,35-44 years,Never married,Female,Middle Age,1721
+1973,45-54 years,Married(a),Male,Middle Age,1722
+1972,45-54 years,Separated,Male,Middle Age,1723
+1971,45-54 years,Divorced,Male,Middle Age,1724
+1970,45-54 years,Widowed,Male,Middle Age,1725
+1969,45-54 years,Never married,Male,Middle Age,1726
+1968,45-54 years,Married(a),Female,Middle Age,1727
+1967,45-54 years,Separated,Female,Middle Age,1728
+1966,45-54 years,Divorced,Female,Middle Age,1729
+1965,45-54 years,Widowed,Female,Middle Age,1730
+1964,45-54 years,Never married,Female,Middle Age,1731
+1963,55-64 years,Married(a),Male,Middle Age,1732
+1962,55-64 years,Separated,Male,Middle Age,1733
+1961,55-64 years,Divorced,Male,Middle Age,1734
+1960,55-64 years,Widowed,Male,Middle Age,1735
+1959,55-64 years,Never married,Male,Middle Age,1736
+1958,55-64 years,Married(a),Female,Middle Age,1737
+1957,55-64 years,Separated,Female,Middle Age,1738
+1956,55-64 years,Divorced,Female,Middle Age,1739
+1955,55-64 years,Widowed,Female,Middle Age,1740
+1954,55-64 years,Never married,Female,Middle Age,1741
+1953,65-74 years,Married(a),Male,Old,1742
+1952,65-74 years,Separated,Male,Old,1743
+1951,65-74 years,Divorced,Male,Old,1744
+1950,65-74 years,Widowed,Male,Old,1745
+1949,65-74 years,Never married,Male,Old,1746
+1948,65-74 years,Married(a),Female,Old,1747
+1947,65-74 years,Separated,Female,Old,1748
+1946,65-74 years,Divorced,Female,Old,1749
+1945,65-74 years,Widowed,Female,Old,1750
+1944,65-74 years,Never married,Female,Old,1751
+1943,75-84 years,Married(a),Male,Old,1752
+1942,75-84 years,Separated,Male,Old,1753
+1941,75-84 years,Divorced,Male,Old,1754
+1940,75-84 years,Widowed,Male,Old,1755
+1939,75-84 years,Never married,Male,Old,1756
+1938,75-84 years,Married(a),Female,Old,1757
+1937,75-84 years,Separated,Female,Old,1758
+1936,75-84 years,Divorced,Female,Old,1759
+1935,75-84 years,Widowed,Female,Old,1760
+1934,75-84 years,Never married,Female,Old,1761
+1933,85 years and over,Married(a),Male,Old,1762
+1933,85 years and over,Separated,Male,Old,1763
+1932,85 years and over,Divorced,Male,Old,1764
+1931,85 years and over,Widowed,Male,Old,1765
+1930,85 years and over,Never married,Male,Old,1766
+1930,85 years and over,Married(a),Female,Old,1767
+1930,85 years and over,Separated,Female,Old,1768
+1929,85 years and over,Divorced,Female,Old,1769
+1929,85 years and over,Widowed,Female,Old,1770
+1928,85 years and over,Never married,Female,Old,1771

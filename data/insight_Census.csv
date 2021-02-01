@@ -1,0 +1,251 @@
+breakdown,breakdown_value,sig,impact,insight,insight_type,score,measure,iid
+Birthday,-1,0.27786858,0.111111111,trend,shape,0.030874287,Count of persons,0
+Birthday,-1,0.936241192,0.033333333,trend,shape,0.03120804,Count of persons,1
+Birthday,-1,0.27786858,0.111111111,trend,shape,0.030874287,Count of persons,2
+Birthday,-1,0.946662557,0.033333333,trend,shape,0.031555419,Count of persons,3
+Birthday,-1,0.952476427,0.033333333,trend,shape,0.031749214,Count of persons,4
+Birthday,-1,0.966485327,0.033333333,trend,shape,0.032216178,Count of persons,5
+Birthday,-1,0.942061251,0.033333333,trend,shape,0.031402042,Count of persons,6
+Birthday,-1,0.969699463,0.033333333,trend,shape,0.032323315,Count of persons,7
+Birthday,-1,0.948563985,0.033333333,trend,shape,0.031618799,Count of persons,8
+Birthday,-1,0.957085967,0.033333333,trend,shape,0.031902866,Count of persons,9
+Birthday,-1,0.698487315,0.055555556,trend,shape,0.038804851,Count of persons,10
+Birthday,-1,0.975593298,0.033333333,trend,shape,0.032519777,Count of persons,11
+Birthday,-1,0.316749589,0.111111111,trend,shape,0.035194399,Count of persons,12
+Birthday,-1,0.065016128,0.5,trend,shape,0.032508064,Count of persons,13
+Birthday,-1,0.727317491,0.055555556,trend,shape,0.040406527,Count of persons,14
+Birthday,-1,0.995566379,0.033333333,trend,shape,0.033185546,Count of persons,15
+Birthday,-1,0.993635046,0.033333333,trend,shape,0.033121168,Count of persons,16
+Birthday,-1,0.957621445,0.033333333,trend,shape,0.031920715,Count of persons,17
+Birthday,-1,0.993436432,0.033333333,trend,shape,0.033114548,Count of persons,18
+Birthday,-1,0.316749589,0.111111111,trend,shape,0.035194399,Count of persons,19
+Birthday,-1,0.698487315,0.055555556,trend,shape,0.038804851,Count of persons,20
+Birthday,-1,0.837337523,0.1,trend,shape,0.083733752,Count of persons,21
+Birthday,-1,0.747509717,0.055555556,trend,shape,0.041528318,Count of persons,22
+Birthday,-1,0.10731129,0.333333333,trend,shape,0.03577043,Count of persons,23
+Birthday,-1,0.748363569,0.055555556,trend,shape,0.041575754,Count of persons,24
+Birthday,-1,0.806260333,0.066666667,trend,shape,0.053750689,Count of persons,25
+Birthday,-1,0.896112209,0.1,trend,shape,0.089611221,Count of persons,26
+Birthday,-1,0.812381522,0.1,trend,shape,0.081238152,Count of persons,27
+Birthday,-1,0.748363569,0.055555556,trend,shape,0.041575754,Count of persons,28
+Birthday,-1,0.707200347,0.066666667,trend,shape,0.04714669,Count of persons,29
+Birthday,-1,0.850686685,0.066666667,trend,shape,0.056712446,Count of persons,30
+Birthday,-1,0.064250919,1.0,trend,shape,0.064250919,Count of persons,31
+Birthday,-1,0.92599491,0.066666667,trend,shape,0.061732994,Count of persons,32
+Birthday,-1,0.728088317,0.066666667,trend,shape,0.048539221,Count of persons,33
+Birthday,-1,0.996120769,0.033333333,trend,shape,0.033204026,Count of persons,34
+Birthday,-1,0.977974795,0.033333333,trend,shape,0.03259916,Count of persons,35
+Birthday,-1,0.99912579,0.033333333,trend,shape,0.033304193,Count of persons,36
+Birthday,-1,0.979460957,0.066666667,trend,shape,0.065297397,Count of persons,37
+Birthday,-1,0.651366722,0.066666667,trend,shape,0.043424448,Count of persons,38
+Birthday,-1,0.584801384,0.2,trend,shape,0.116960277,Count of persons,39
+Birthday,-1,0.759482475,0.066666667,trend,shape,0.050632165,Count of persons,40
+Birthday,-1,0.92685529,0.066666667,trend,shape,0.061790353,Count of persons,41
+Birthday,-1,0.727317491,0.055555556,trend,shape,0.040406527,Count of persons,42
+Birthday,-1,0.822191248,0.2,trend,shape,0.16443825,Count of persons,43
+Birthday,-1,0.855383858,0.1,trend,shape,0.085538386,Count of persons,44
+Birthday,-1,0.747509717,0.055555556,trend,shape,0.041528318,Count of persons,45
+Birthday,-1,0.88251445,0.066666667,trend,shape,0.058834297,Count of persons,46
+Birthday,-1,0.84083707,0.066666667,trend,shape,0.056055805,Count of persons,47
+Birthday,-1,0.815662547,0.066666667,trend,shape,0.054377503,Count of persons,48
+Birthday,-1,0.981619635,0.066666667,trend,shape,0.065441309,Count of persons,49
+Birthday,1986,0.950387024,0.033333333,top1,point,0.031679567,Count of persons,50
+Age Segment,25-34 years,0.950387024,0.033333333,top1,point,0.031679567,Count of persons,51
+Age Segment,25-34 years,0.998492229,0.033333333,top1,point,0.033283074,Count of persons,52
+Age Segment,35-44 years,0.220172629,0.166666667,top1,point,0.036695438,Count of persons,53
+Marital Status,Married(a),0.734146547,0.055555556,top1,point,0.040785919,Count of persons,54
+Birthday,1991,0.998492229,0.033333333,top1,point,0.033283074,Count of persons,55
+Marital Status,Married(a),0.889417785,0.055555556,top1,point,0.049412099,Count of persons,56
+Age Segment,25-34 years,0.595360545,0.066666667,top1,point,0.039690703,Count of persons,57
+Birthday,1958,0.734146547,0.055555556,top1,point,0.040785919,Count of persons,58
+Age Segment,45-54 years,0.738003272,0.066666667,top1,point,0.049200218,Count of persons,59
+Age Group,Middle Age,0.511432854,0.1,top1,point,0.051143285,Count of persons,60
+Age Segment,35-44 years,0.216345669,0.166666667,top1,point,0.036057611,Count of persons,61
+Marital Status,Married(a),0.734146547,0.055555556,top1,point,0.040785919,Count of persons,62
+Marital Status,Married(a),0.973748262,0.055555556,top1,point,0.054097126,Count of persons,63
+Age Group,Middle Age,0.972885483,0.1,top1,point,0.097288548,Count of persons,64
+Birthday,1953,0.973748262,0.055555556,top1,point,0.054097126,Count of persons,65
+Marital Status,Never married,0.9877423,0.055555556,top1,point,0.054874572,Count of persons,66
+Birthday,1943,0.889417785,0.055555556,top1,point,0.049412099,Count of persons,67
+Birthday,1958,0.734146547,0.055555556,top1,point,0.040785919,Count of persons,68
+Marital Status,Married(a),0.889417785,0.055555556,top1,point,0.049412099,Count of persons,69
+Age Segment,25-34 years,0.992884544,0.066666667,top1,point,0.066192303,Count of persons,70
+Marital Status,Married(a),0.973748262,0.055555556,top1,point,0.054097126,Count of persons,71
+Birthday,1953,0.973748262,0.055555556,top1,point,0.054097126,Count of persons,72
+Marital Status,Never married,0.999484488,0.055555556,top1,point,0.055526916,Count of persons,73
+Birthday,2001,0.999417101,0.055555556,top1,point,0.055523172,Count of persons,74
+Birthday,1999,0.999151491,0.055555556,top1,point,0.055508416,Count of persons,75
+Age Group,Middle Age,0.837258533,0.2,top1,point,0.167451707,Count of persons,76
+Marital Status,Married(a),0.657962557,0.111111111,top1,point,0.073106951,Count of persons,77
+Marital Status,Married(a),0.839100295,0.111111111,top1,point,0.093233366,Count of persons,78
+Age Segment,25-34 years,0.914159184,0.166666667,top1,point,0.152359864,Count of persons,79
+Age Group,Middle Age,0.969492054,0.2,top1,point,0.193898411,Count of persons,80
+Age Segment,25-34 years,0.908302367,0.333333333,top1,point,0.302767456,Count of persons,81
+Marital Status,Never married,0.999484488,0.055555556,top1,point,0.055526916,Count of persons,82
+Marital Status,Never married,0.999518982,0.055555556,top1,point,0.055528832,Count of persons,83
+Birthday,2001,0.999417101,0.055555556,top1,point,0.055523172,Count of persons,84
+Birthday,1999,0.999151491,0.055555556,top1,point,0.055508416,Count of persons,85
+Age Segment,25-34 years,0.901862297,0.166666667,top1,point,0.150310383,Count of persons,86
+Marital Status,Married(a),0.839100295,0.111111111,top1,point,0.093233366,Count of persons,87
+Age Segment,25-34 years,0.767082449,0.066666667,top1,point,0.05113883,Count of persons,88
+Age Segment,35-44 years,0.218296329,0.333333333,top1,point,0.072765443,Count of persons,89
+Birthday,1943,0.889417785,0.055555556,top1,point,0.049412099,Count of persons,90
+Marital Status,Never married,0.784474643,0.111111111,top1,point,0.087163849,Count of persons,91
+Age Group,Middle Age,0.99548345,0.1,top1,point,0.099548345,Count of persons,92
+Marital Status,Never married,0.999518982,0.055555556,top1,point,0.055528832,Count of persons,93
+Marital Status,Married(a),0.971934363,0.166666667,top1,point,0.16198906,Count of persons,94
+Marital Status,Never married,0.9877423,0.055555556,top1,point,0.054874572,Count of persons,95
+Marital Status,Never married,0.784474643,0.111111111,top1,point,0.087163849,Count of persons,96
+Marital Status,Never married,0.999505209,0.111111111,top1,point,0.111056134,Count of persons,97
+Marital Status,Never married,0.999505209,0.111111111,top1,point,0.111056134,Count of persons,98
+Marital Status,Married(a),0.657962557,0.111111111,top1,point,0.073106951,Count of persons,99
+Birthday,1990,1.0,0.066666667,change point,shape,0.066666667,Count of persons,100
+Birthday,1991,1.0,0.066666667,change point,shape,0.066666667,Count of persons,101
+Birthday,1993,1.0,0.066666667,change point,shape,0.066666667,Count of persons,102
+Birthday,1988,1.0,0.1,change point,shape,0.1,Count of persons,103
+Birthday,1974,1.0,0.1,change point,shape,0.1,Count of persons,104
+Birthday,1944,1.0,0.066666667,change point,shape,0.066666667,Count of persons,105
+Birthday,1979,1.0,0.1,change point,shape,0.1,Count of persons,106
+Birthday,2001,0.999998004,0.111111111,change point,shape,0.111110889,Count of persons,107
+Birthday,1962,1.0,0.111111111,change point,shape,0.111111111,Count of persons,108
+Birthday,1945,1.0,0.1,change point,shape,0.1,Count of persons,109
+Birthday,1996,0.999997274,0.111111111,change point,shape,0.111110808,Count of persons,110
+Birthday,1992,1.0,0.066666667,change point,shape,0.066666667,Count of persons,111
+Birthday,1993,1.0,0.1,change point,shape,0.1,Count of persons,112
+Birthday,1952,1.0,0.1,change point,shape,0.1,Count of persons,113
+Birthday,1950,1.0,0.1,change point,shape,0.1,Count of persons,114
+Birthday,1972,1.0,0.111111111,change point,shape,0.111111111,Count of persons,115
+Birthday,1962,1.0,0.111111111,change point,shape,0.111111111,Count of persons,116
+Birthday,1977,1.0,0.166666667,change point,shape,0.166666667,Count of persons,117
+Birthday,1952,1.0,0.111111111,change point,shape,0.111111111,Count of persons,118
+Birthday,1929,1.0,0.111111111,change point,shape,0.111111111,Count of persons,119
+Birthday,1987,1.0,0.1,change point,shape,0.1,Count of persons,120
+Birthday,1952,1.0,0.111111111,change point,shape,0.111111111,Count of persons,121
+Birthday,1929,1.0,0.111111111,change point,shape,0.111111111,Count of persons,122
+Birthday,1981,1.0,0.1,change point,shape,0.1,Count of persons,123
+Birthday,1942,1.0,0.111111111,change point,shape,0.111111111,Count of persons,124
+Birthday,1929,1.0,0.333333333,change point,shape,0.333333333,Count of persons,125
+Birthday,1996,0.999997274,0.111111111,change point,shape,0.111110808,Count of persons,126
+Birthday,1985,1.0,0.333333333,change point,shape,0.333333333,Count of persons,127
+Birthday,1982,1.0,0.111111111,change point,shape,0.111111111,Count of persons,128
+Birthday,1985,1.0,0.111111111,change point,shape,0.111111111,Count of persons,129
+Birthday,1972,1.0,0.111111111,change point,shape,0.111111111,Count of persons,130
+Birthday,1929,1.0,1.0,change point,shape,1.0,Count of persons,131
+Birthday,1942,1.0,0.2,change point,shape,0.2,Count of persons,132
+Birthday,1996,1.0,0.2,change point,shape,0.2,Count of persons,133
+Birthday,1982,1.0,0.111111111,change point,shape,0.111111111,Count of persons,134
+Birthday,1982,1.0,0.333333333,change point,shape,0.333333333,Count of persons,135
+Birthday,1985,1.0,0.166666667,change point,shape,0.166666667,Count of persons,136
+Birthday,1947,1.0,0.166666667,change point,shape,0.166666667,Count of persons,137
+Birthday,1942,1.0,0.111111111,change point,shape,0.111111111,Count of persons,138
+Birthday,1987,1.0,0.5,change point,shape,0.5,Count of persons,139
+Birthday,1990,1.0,0.166666667,change point,shape,0.166666667,Count of persons,140
+Birthday,1979,1.0,0.2,change point,shape,0.2,Count of persons,141
+Birthday,1976,1.0,0.1,change point,shape,0.1,Count of persons,142
+Birthday,1990,1.0,0.2,change point,shape,0.2,Count of persons,143
+Birthday,1952,1.0,0.166666667,change point,shape,0.166666667,Count of persons,144
+Birthday,1982,1.0,0.166666667,change point,shape,0.166666667,Count of persons,145
+Birthday,1985,1.0,0.111111111,change point,shape,0.111111111,Count of persons,146
+Birthday,1990,1.0,0.5,change point,shape,0.5,Count of persons,147
+Birthday,2001,0.999998004,0.111111111,change point,shape,0.111110889,Count of persons,148
+Birthday,1981,1.0,0.2,change point,shape,0.2,Count of persons,149
+Birthday,1989,0.964777982,0.066666667,outlier,shape,0.064318532,Count of persons,150
+Birthday,1986,0.969437624,0.066666667,outlier,shape,0.064629175,Count of persons,151
+Birthday,1987,0.968910972,0.066666667,outlier,shape,0.064594065,Count of persons,152
+Birthday,1955,0.982021259,0.066666667,outlier,shape,0.065468084,Count of persons,153
+Birthday,1985,0.97865603,0.066666667,outlier,shape,0.065243735,Count of persons,154
+Birthday,1972,0.953965947,0.1,outlier,shape,0.095396595,Count of persons,155
+Birthday,1983,0.892986265,0.1,outlier,shape,0.089298627,Count of persons,156
+Birthday,1978,0.969604423,0.111111111,outlier,shape,0.107733825,Count of persons,157
+Birthday,1978,0.895381082,0.1,outlier,shape,0.089538108,Count of persons,158
+Birthday,1967,0.953725461,0.1,outlier,shape,0.095372546,Count of persons,159
+Birthday,1956,0.947508738,0.1,outlier,shape,0.094750874,Count of persons,160
+Birthday,1996,0.912489663,0.111111111,outlier,shape,0.10138774,Count of persons,161
+Birthday,1961,0.955646103,0.1,outlier,shape,0.09556461,Count of persons,162
+Birthday,1989,0.966929318,0.1,outlier,shape,0.096692932,Count of persons,163
+Birthday,1940,0.945599202,0.1,outlier,shape,0.09455992,Count of persons,164
+Birthday,1963,0.976018704,0.111111111,outlier,shape,0.108446523,Count of persons,165
+Birthday,1968,0.974540157,0.111111111,outlier,shape,0.10828224,Count of persons,166
+Birthday,1984,0.954343898,0.166666667,outlier,shape,0.159057316,Count of persons,167
+Birthday,1943,0.979147534,0.111111111,outlier,shape,0.10879417,Count of persons,168
+Birthday,1929,0.97878052,0.111111111,outlier,shape,0.108753391,Count of persons,169
+Birthday,1984,0.957787842,0.1,outlier,shape,0.095778784,Count of persons,170
+Birthday,1943,0.979147534,0.111111111,outlier,shape,0.10879417,Count of persons,171
+Birthday,2001,0.898253567,0.111111111,outlier,shape,0.099805952,Count of persons,172
+Birthday,1989,0.955581902,0.111111111,outlier,shape,0.106175767,Count of persons,173
+Birthday,1996,0.912489663,0.111111111,outlier,shape,0.10138774,Count of persons,174
+Birthday,1989,0.968714692,0.333333333,outlier,shape,0.322904897,Count of persons,175
+Birthday,2001,0.898253567,0.111111111,outlier,shape,0.099805952,Count of persons,176
+Birthday,1953,0.999148816,0.333333333,outlier,shape,0.333049605,Count of persons,177
+Birthday,1989,0.955581902,0.111111111,outlier,shape,0.106175767,Count of persons,178
+Birthday,1978,0.969604423,0.111111111,outlier,shape,0.107733825,Count of persons,179
+Birthday,1953,0.982185863,0.111111111,outlier,shape,0.109131763,Count of persons,180
+Birthday,1989,0.993980574,1.0,outlier,shape,0.993980574,Count of persons,181
+Birthday,1967,0.974442493,0.2,outlier,shape,0.194888499,Count of persons,182
+Birthday,1956,0.978265715,0.2,outlier,shape,0.195653143,Count of persons,183
+Birthday,1963,0.976018704,0.111111111,outlier,shape,0.108446523,Count of persons,184
+Birthday,1978,0.981911693,0.333333333,outlier,shape,0.327303898,Count of persons,185
+Birthday,1978,0.981735792,0.166666667,outlier,shape,0.163622632,Count of persons,186
+Birthday,1948,0.997860212,0.166666667,outlier,shape,0.166310035,Count of persons,187
+Birthday,1953,0.982185863,0.111111111,outlier,shape,0.109131763,Count of persons,188
+Birthday,1978,0.992497469,0.5,outlier,shape,0.496248734,Count of persons,189
+Birthday,1989,0.974347261,0.166666667,outlier,shape,0.16239121,Count of persons,190
+Birthday,1989,0.97583294,0.2,outlier,shape,0.195166588,Count of persons,191
+Birthday,1935,0.957803775,0.1,outlier,shape,0.095780377,Count of persons,192
+Birthday,1935,0.994879912,0.2,outlier,shape,0.198975982,Count of persons,193
+Birthday,1983,0.978251864,0.166666667,outlier,shape,0.163041977,Count of persons,194
+Birthday,1953,0.999208347,0.166666667,outlier,shape,0.166534724,Count of persons,195
+Birthday,1968,0.974540157,0.111111111,outlier,shape,0.10828224,Count of persons,196
+Birthday,1989,0.994736126,0.5,outlier,shape,0.497368063,Count of persons,197
+Birthday,1929,0.97878052,0.111111111,outlier,shape,0.108753391,Count of persons,198
+Birthday,1978,0.900592252,0.2,outlier,shape,0.18011845,Count of persons,199
+Marital Status,Married(a),0.685315833,0.111111111,attribution,point,0.076146204,Count of persons,200
+Marital Status,Married(a),0.685315833,0.111111111,attribution,point,0.076146204,Count of persons,201
+Age Group,Young,0.769674293,0.1,attribution,point,0.076967429,Count of persons,202
+Marital Status,Married(a),0.704242119,0.111111111,attribution,point,0.078249124,Count of persons,203
+Age Group,Young,0.78104866,0.1,attribution,point,0.078104866,Count of persons,204
+Age Segment,25-34 years,0.536526517,0.166666667,attribution,point,0.089421086,Count of persons,205
+Age Group,Middle Age,0.773665924,0.1,attribution,point,0.077366592,Count of persons,206
+Age Group,Middle Age,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,207
+Age Group,Old,0.874447054,0.1,attribution,point,0.087444705,Count of persons,208
+Marital Status,Married(a),0.704242119,0.111111111,attribution,point,0.078249124,Count of persons,209
+Age Group,Old,0.855793919,0.1,attribution,point,0.085579392,Count of persons,210
+Age Segment,65-74 years,0.60562159,0.166666667,attribution,point,0.100936932,Count of persons,211
+Marital Status,Never married,0.932615529,0.111111111,attribution,point,0.103623948,Count of persons,212
+Age Group,Young,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,213
+Marital Status,Married(a),0.685691768,0.166666667,attribution,point,0.114281961,Count of persons,214
+Age Group,Middle Age,0.643547435,0.2,attribution,point,0.128709487,Count of persons,215
+Age Group,Middle Age,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,216
+Age Segment,65-74 years,0.538163351,0.166666667,attribution,point,0.089693892,Count of persons,217
+Marital Status,Never married,0.932615529,0.111111111,attribution,point,0.103623948,Count of persons,218
+Age Group,Old,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,219
+Age Segment,25-34 years,0.558609297,0.166666667,attribution,point,0.093101549,Count of persons,220
+Marital Status,Never married,0.950616129,0.111111111,attribution,point,0.105624014,Count of persons,221
+Marital Status,Never married,0.950616129,0.111111111,attribution,point,0.105624014,Count of persons,222
+Marital Status,Married(a),0.65496887,0.166666667,attribution,point,0.109161478,Count of persons,223
+Marital Status,Never married,0.831538515,0.166666667,attribution,point,0.138589753,Count of persons,224
+Sex,Female,0.556689002,0.333333333,attribution,point,0.185563001,Count of persons,225
+Age Group,Young,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,226
+Marital Status,Married(a),0.6700808,0.333333333,attribution,point,0.223360267,Count of persons,227
+Sex,Female,0.618314206,0.2,attribution,point,0.123662841,Count of persons,228
+Age Group,Middle Age,0.738729375,0.2,attribution,point,0.147745875,Count of persons,229
+Marital Status,Married(a),0.753717095,0.166666667,attribution,point,0.125619516,Count of persons,230
+Sex,Female,0.519026352,1.0,attribution,point,0.519026352,Count of persons,231
+Age Group,Old,0.870662032,0.2,attribution,point,0.174132406,Count of persons,232
+Age Segment,65-74 years,0.569265444,0.333333333,attribution,point,0.189755148,Count of persons,233
+Marital Status,Never married,0.767722094,0.166666667,attribution,point,0.127953682,Count of persons,234
+Marital Status,Married(a),0.611027618,0.333333333,attribution,point,0.203675873,Count of persons,235
+Age Group,Young,0.775105012,0.2,attribution,point,0.155021002,Count of persons,236
+Sex,Female,0.832471037,0.2,attribution,point,0.166494207,Count of persons,237
+Age Group,Middle Age,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,238
+Age Segment,25-34 years,0.547598593,0.333333333,attribution,point,0.182532864,Count of persons,239
+Sex,Male,0.534701668,0.2,attribution,point,0.106940334,Count of persons,240
+Sex,Female,0.500739716,0.333333333,attribution,point,0.166913239,Count of persons,241
+Sex,Female,0.50004822,0.2,attribution,point,0.100009644,Count of persons,242
+Sex,Female,0.517012808,0.333333333,attribution,point,0.172337603,Count of persons,243
+Age Group,Old,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,244
+Age Group,Young,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,245
+Age Group,Old,0.952209648,0.111111111,attribution,point,0.105801072,Count of persons,246
+Marital Status,Never married,0.801136289,0.333333333,attribution,point,0.26704543,Count of persons,247
+Sex,Female,0.562432729,0.2,attribution,point,0.112486546,Count of persons,248
+Age Group,Middle Age,0.764973638,0.2,attribution,point,0.152994728,Count of persons,249
