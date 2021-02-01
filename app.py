@@ -4,11 +4,12 @@ from flask_cors import CORS
 from flask import Flask, request, jsonify
 import os
 
-from dataService.dataService import DataService
+from dataService.dataService import DataService, cache
 
 dm = DataService()
 app = Flask(__name__)
 CORS(app)
+cache.init_app(app, config={'CACHE_TYPE': 'simple'})
 
 FILE_ABS_PATH = os.path.dirname(__file__)
 ROOT_PATH = os.path.join(FILE_ABS_PATH, '../')
@@ -41,7 +42,9 @@ def get_insight_count_for_record():
 def get_graph_data_by_iid():
     params = request.json
     iid = params['iid']
-    return str([1, 2, 3, 4])
+    name = params['name']
+    data = dm.get_insight_by_iid(iid, name)
+    return str(data)
 
 
 if __name__ == '__main__':
