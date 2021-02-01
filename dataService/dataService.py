@@ -4,10 +4,11 @@ import pandas as pd
 
 FILE_ABS_PATH = os.path.dirname(__file__)
 ROOT_PATH = os.path.join(FILE_ABS_PATH, '../')
-DATA_PATH = os.path.join(ROOT_PATH, 'data')
-RAW_DATA_FOLDER = os.path.join(ROOT_PATH, 'data/rawData')
+EDGE_FOLDER = os.path.join(ROOT_PATH, 'data/edge')
 INSIGHT_FOLDER = os.path.join(ROOT_PATH, 'data/insight')
+RECORD_FOLDER = os.path.join(ROOT_PATH, 'data/record')
 SID_CID_FOLDER = os.path.join(ROOT_PATH, 'data/sid_cid')
+SUBSPACE_FOLDER = os.path.join(ROOT_PATH, 'data/subspace')
 
 
 class DataService():
@@ -15,28 +16,43 @@ class DataService():
         pass
 
     def read_data_names(self):
-        print('insight folder', INSIGHT_FOLDER)
         return [p.split('.')[0].split('_')[-1] for p in os.listdir(INSIGHT_FOLDER)]
 
-    def __get_raw_data_by_name(self, name):
-        data_path = os.path.join(DATA_PATH, 'record_{}.csv'.format(name))
-        df = pd.read_csv(data_path)
+    def __get_edge_by_name(self, name):
+        edges_path = os.path.join(EDGE_FOLDER, 'edge_{}.csv'.format(name))
+        df = pd.read_csv(edges_path)
         return df.to_dict('records')
 
     def __get_insight_by_name(self, name):
-        insight_path = os.path.join(INSIGHT_FOLDER, 'insight_graph_{}.json'.format(name))
-        with open(insight_path, 'r') as input_file:
-            data = json.load(input_file)
-            return data
+        insight_path = os.path.join(INSIGHT_FOLDER, 'insight_{}.csv'.format(name))
+        df = pd.read_csv(insight_path)
+        return df.to_dict('records'), df['insight'].unique().tolist(), df['insight_type'].unique().tolist()
+
+    def __get_record_by_name(self, name):
+        record_path = os.path.join(RECORD_FOLDER, 'record_{}.csv'.format(name))
+        df = pd.read_csv(record_path)
+        return df.to_dict('records')
+
+    def __get_subspace_by_name(self, name):
+        subspace_path = os.path.join(SUBSPACE_FOLDER, 'subspace_{}.csv'.format(name))
+        df = pd.read_csv(subspace_path)
+        return df.to_dict('records'), df.head(0).columns.values.tolist()[0:-1]
 
     def get_data_by_name(self, name):
-        raw_data = self.__get_raw_data_by_name(name)
-        insight_data = self.__get_insight_by_name(name)
-        return {
-            'raw': raw_data,
-            'insight': insight_data
-        }
+        edge_data = self.__get_edge_by_name(name)
+        insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
+        record_data = self.__get_record_by_name(name)
+        subspace_data, feature_data = self.__get_subspace_by_name(name)
 
+        return {
+            'record': record_data,
+            'insight': insight_data,
+            'edge': edge_data,
+            'feature': {'feature': feature_data},
+            'insight_name': {'insight_name': insight_name},
+            'insight_type': {'insight_type': insight_type},
+            'subspace': subspace_data
+        }
 
     def get_subspace_count_for_record_by_name(self, name):
         sid_cid_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
