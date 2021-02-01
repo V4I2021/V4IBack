@@ -1,9 +1,6 @@
 import os
 import json
 import pandas as pd
-from flask_caching import Cache
-
-cache = Cache()
 
 FILE_ABS_PATH = os.path.dirname(__file__)
 ROOT_PATH = os.path.join(FILE_ABS_PATH, '../')
@@ -21,25 +18,21 @@ class DataService():
     def read_data_names(self):
         return [p.split('.')[0].split('_')[-1] for p in os.listdir(INSIGHT_FOLDER)]
 
-    @cache.memoize(timeout=50)
     def __get_edge_by_name(self, name):
         edges_path = os.path.join(EDGE_FOLDER, 'edge_{}.csv'.format(name))
         df = pd.read_csv(edges_path)
         return df
 
-    @cache.memoize(timeout=50)
     def __get_insight_by_name(self, name):
         insight_path = os.path.join(INSIGHT_FOLDER, 'insight_{}.csv'.format(name))
         df = pd.read_csv(insight_path)
         return df, df['insight'].unique().tolist(), df['insight_type'].unique().tolist()
 
-    @cache.memoize(timeout=50)
     def __get_record_by_name(self, name):
         record_path = os.path.join(RECORD_FOLDER, 'record_{}.csv'.format(name))
         df = pd.read_csv(record_path)
         return df
 
-    @cache.memoize(timeout=50)
     def __get_subspace_by_name(self, name):
         subspace_path = os.path.join(SUBSPACE_FOLDER, 'subspace_{}.csv'.format(name))
         df = pd.read_csv(subspace_path)
@@ -55,9 +48,9 @@ class DataService():
             'record': record_data.to_dict('records'),
             'insight': insight_data.to_dict('records'),
             'edge': edge_data.to_dict('records'),
-            'feature': feature_data,
-            'insight_name': insight_name,
-            'insight_type': insight_type,
+            'feature': {'feature': feature_data},
+            'insight_name': {'insight_name': insight_name},
+            'insight_type': {'insight_type': insight_type},
             'subspace': subspace_data.to_dict('records')
         }
 
@@ -74,8 +67,5 @@ class DataService():
         print(res)
         return res
 
-    def get_insight_by_iid(self, iid, name):
-        insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
-        insight = insight_data.loc[insight_data['iid'] == iid]
-        print(insight)
-        return 0
+    def get_insight_by_iid(self, iid):
+        pass
