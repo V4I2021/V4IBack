@@ -21,22 +21,22 @@ class DataService():
     def __get_edge_by_name(self, name):
         edges_path = os.path.join(EDGE_FOLDER, 'edge_{}.csv'.format(name))
         df = pd.read_csv(edges_path)
-        return df.to_dict('records')
+        return df
 
     def __get_insight_by_name(self, name):
         insight_path = os.path.join(INSIGHT_FOLDER, 'insight_{}.csv'.format(name))
         df = pd.read_csv(insight_path)
-        return df.to_dict('records'), df['insight'].unique().tolist(), df['insight_type'].unique().tolist()
+        return df, df['insight'].unique().tolist(), df['insight_type'].unique().tolist()
 
     def __get_record_by_name(self, name):
         record_path = os.path.join(RECORD_FOLDER, 'record_{}.csv'.format(name))
         df = pd.read_csv(record_path)
-        return df.to_dict('records')
+        return df
 
     def __get_subspace_by_name(self, name):
         subspace_path = os.path.join(SUBSPACE_FOLDER, 'subspace_{}.csv'.format(name))
         df = pd.read_csv(subspace_path)
-        return df.to_dict('records'), df.head(0).columns.values.tolist()[0:-1]
+        return df, df.head(0).columns.values.tolist()[0:-1]
 
     def get_data_by_name(self, name):
         edge_data = self.__get_edge_by_name(name)
@@ -45,13 +45,13 @@ class DataService():
         subspace_data, feature_data = self.__get_subspace_by_name(name)
 
         return {
-            'record': record_data,
-            'insight': insight_data,
-            'edge': edge_data,
+            'record': record_data.to_dict('records'),
+            'insight': insight_data.to_dict('records'),
+            'edge': edge_data.to_dict('records'),
             'feature': {'feature': feature_data},
             'insight_name': {'insight_name': insight_name},
             'insight_type': {'insight_type': insight_type},
-            'subspace': subspace_data
+            'subspace': subspace_data.to_dict('records')
         }
 
     def get_subspace_count_for_record_by_name(self, name):
@@ -66,3 +66,6 @@ class DataService():
         res = iids_df.to_dict('index')
         print(res)
         return res
+
+    def get_insight_by_iid(self, iid):
+        pass
