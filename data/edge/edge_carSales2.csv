@@ -1,4 +1,4 @@
-source_iid,target_iid,jaccard_index
+source,target,jaccard_index
 0,145,1.0
 0,157,1.0
 0,340,1.0
