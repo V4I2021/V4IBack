@@ -45,6 +45,16 @@ class DataService():
         df = pd.read_csv(subspace_path)
         return df, df.head(0).columns.values.tolist()[0:-1]
 
+    def __get_record_by_subspace(self, name, sid):
+        sid_cid_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
+        sid_cid_data = pd.read_csv(sid_cid_path)
+        record_data = self.__get_record_by_name(name)
+
+        df = pd.merge(sid_cid_data, record_data, on=['cid'])
+        df = df.loc[df['sid'] == sid]
+        df = df.drop(['sid', 'cid'], axis=1)
+        return df
+
     def get_data_by_name(self, name):
         edge_data = self.__get_edge_by_name(name)
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
@@ -77,5 +87,55 @@ class DataService():
     def get_insight_by_iid(self, iid, name):
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
         insight = insight_data.loc[insight_data['iid'] == iid]
-        print(insight)
-        return 0
+        record = self.__get_record_by_subspace(name, insight['sid'].iloc[0])
+
+        insight_name = insight['insight'].iloc[0]
+        breakdown = insight['breakdown'].iloc[0]
+        breakdown_value = insight['breakdown_value'].iloc[0]
+        if breakdown_value.isdigit():
+            breakdown_value = int(breakdown_value)
+        measure = insight['measure'].iloc[0]
+
+        if insight_name == 'top1':
+            record = record.groupby(breakdown, as_index=False).agg({measure: 'sum'})
+            record = record.sort_values(by=measure, ascending=False).iloc[0:10]
+            return {
+                'measure': measure,
+                'measure_value': record[measure].tolist()
+            }
+        elif insight_name == 'trend':
+            record = record.groupby(breakdown, as_index=False).agg(
+                {breakdown: 'first', measure: 'sum'})
+            return {
+                'breakdown': breakdown,
+                'measure': measure,
+                'breakdown_value': record[breakdown].tolist(),
+                'measure_value': record[measure].tolist()
+            }
+        elif insight_name == 'correlation':
+            # todo
+            return 0
+        elif insight_name == 'change point' or insight_name == 'outlier':
+            record = record.groupby(breakdown, as_index=False).agg(
+                {breakdown: 'first', measure: 'sum'})
+            # todo: int value might be read as string
+            y = record.loc[record[breakdown] == breakdown_value][measure].iloc[0]
+
+            return {
+                'breakdown': breakdown,
+                'measure': measure,
+                'breakdown_value': record[breakdown].tolist(),
+                'measure_value': record[measure].tolist(),
+                'x': str(breakdown_value),
+                'y': str(y)
+            }
+        elif insight_name == 'attribution':
+            record = record.groupby(breakdown, as_index=False).agg(
+                {breakdown: 'first', measure: 'sum'})
+            record = record.sort_values(by=measure)
+            return {
+                'breakdown_value': record[breakdown].tolist(),
+                'measure_value': record[measure].tolist()
+            }
+        else:
+            return 0

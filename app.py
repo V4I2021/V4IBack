@@ -44,7 +44,7 @@ def get_graph_data_by_iid():
     iid = params['iid']
     name = params['name']
     data = dm.get_insight_by_iid(iid, name)
-    return str(data)
+    return json.dumps(data, sort_keys=False)
 
 
 if __name__ == '__main__':
