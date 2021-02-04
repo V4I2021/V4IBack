@@ -34,7 +34,7 @@ def get_data_by_name():
 def get_insight_count_for_record():
     params = request.json
     dataName = params['dataName']
-    data = dm.get_subspace_count_for_record_by_name(dataName)
+    data = dm.get_insight_count_for_record_by_name(dataName)
     return json.dumps(data, sort_keys=False)
 
 
@@ -45,6 +45,22 @@ def get_graph_data_by_iid():
     name = params['name']
     data = dm.get_insight_by_iid(iid, name)
     return str(data)
+
+
+@app.route('/api/get_insight_count_for_subspace', methods=['POST'])
+def get_insight_count_for_subspace():
+    params = request.json
+    dataName = params['dataName']
+    data = dm.get_insight_count_for_subspace_by_name(dataName)
+    return json.dumps(data, sort_keys=False)
+
+@app.route('/api/get_subspace_count_for_record', methods=['POST'])
+def get_subspace_count_for_record():
+    params = request.json
+    dataName = params['dataName']
+    data = dm.get_subspace_count_for_record_by_name(dataName)
+    return json.dumps(data, sort_keys=False)
+
 
 
 if __name__ == '__main__':

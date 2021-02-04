@@ -40,6 +40,12 @@ class DataService():
         return df
 
     @cache.memoize(timeout=50)
+    def __get_sid_cid_by_name(self, name):
+        record_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
+        df = pd.read_csv(record_path)
+        return df
+
+    @cache.memoize(timeout=50)
     def __get_subspace_by_name(self, name):
         subspace_path = os.path.join(SUBSPACE_FOLDER, 'subspace_{}.csv'.format(name))
         df = pd.read_csv(subspace_path)
@@ -61,9 +67,8 @@ class DataService():
             'subspace': subspace_data.to_dict('records')
         }
 
-    def get_subspace_count_for_record_by_name(self, name):
-        sid_cid_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
-        sid_cid_df = pd.read_csv(sid_cid_path)
+    def get_insight_count_for_record_by_name(self, name):
+        sid_cid_df = self.__get_sid_cid_by_name(name)
         insight_data, _, _ = self.__get_insight_by_name(name)
         iids_df = pd.merge(insight_data, sid_cid_df, on='sid', how='inner')
         iids_df = iids_df.groupby('cid')['iid'].apply(list).reset_index(name='iids')
@@ -71,7 +76,6 @@ class DataService():
         iids_df.sort_values(by='iid_count', inplace=True, ascending=False)
         iids_df.reset_index(inplace=True, drop=True)
         res = iids_df.to_dict('index')
-        print(res)
         return res
 
     def get_insight_by_iid(self, iid, name):
@@ -79,3 +83,35 @@ class DataService():
         insight = insight_data.loc[insight_data['iid'] == iid]
         print(insight)
         return 0
+
+    def get_insight_count_for_subspace_by_name(self, name):
+        insight_data, _, _ = self.__get_insight_by_name(name)
+        iid_sid_df = insight_data[['iid', 'sid']].groupby('sid')['iid'].apply(list).reset_index(name='iids')
+        iid_sid_df['iid_count'] = [len(id_list) for id_list in iid_sid_df['iids']]
+
+        subspace_data, _ = self.__get_subspace_by_name(name)
+        subspace_data['star_count'] = ""
+        for index, row in subspace_data.iterrows():
+            if '*' in row.tolist():
+                subspace_data['star_count'][index] = row.tolist().count('*')
+            else:
+                subspace_data['star_count'][index] = 0
+
+        iid_sid_df = subspace_data[['sid', 'star_count']].merge(iid_sid_df, on='sid', how='inner')
+        iid_sid_df.sort_values(by=['iid_count', 'star_count'], inplace=True, ascending=False)
+        iid_sid_df.reset_index(inplace=True, drop=True)
+        res = iid_sid_df.to_dict('index')
+        print("get_insight_count_for_subspace_by_name")
+        print(iid_sid_df)
+        return res
+
+    def get_subspace_count_for_record_by_name(self, name):
+        sid_cid_df = self.__get_sid_cid_by_name(name)
+        insight_data, _, _ = self.__get_insight_by_name(name)
+        iids_df = pd.merge(insight_data, sid_cid_df, on='sid', how='inner')
+        iids_df = iids_df.groupby('cid')['iid'].apply(list).reset_index(name='iids')
+        iids_df['iid_count'] = [len(id_list) for id_list in iids_df['iids']]
+        iids_df.sort_values(by='iid_count', inplace=True, ascending=False)
+        iids_df.reset_index(inplace=True, drop=True)
+        res = iids_df.to_dict('index')
+        return res
