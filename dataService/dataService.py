@@ -100,6 +100,7 @@ class DataService():
             record = record.groupby(breakdown, as_index=False).agg({measure: 'sum'})
             record = record.sort_values(by=measure, ascending=False).iloc[0:10]
             return {
+                'insight_name': insight_name,
                 'measure': measure,
                 'measure_value': record[measure].tolist()
             }
@@ -107,6 +108,7 @@ class DataService():
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
             return {
+                'insight_name': insight_name,
                 'breakdown': breakdown,
                 'measure': measure,
                 'breakdown_value': record[breakdown].tolist(),
@@ -122,6 +124,7 @@ class DataService():
             y = record.loc[record[breakdown] == breakdown_value][measure].iloc[0]
 
             return {
+                'insight_name': insight_name,
                 'breakdown': breakdown,
                 'measure': measure,
                 'breakdown_value': record[breakdown].tolist(),
@@ -134,6 +137,7 @@ class DataService():
                 {breakdown: 'first', measure: 'sum'})
             record = record.sort_values(by=measure)
             return {
+                'insight_name': insight_name,
                 'breakdown_value': record[breakdown].tolist(),
                 'measure_value': record[measure].tolist()
             }
