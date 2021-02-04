@@ -66,7 +66,9 @@ class DataService():
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
         record_data = self.__get_record_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
-
+        print(subspace_data)
+        print("---------------------")
+        print(subspace_data.to_dict('index'))
         return {
             'record': record_data.to_dict('records'),
             'insight': insight_data.to_dict('records'),
@@ -74,7 +76,7 @@ class DataService():
             'feature': feature_data,
             'insight_name': insight_name,
             'insight_type': insight_type,
-            'subspace': subspace_data.to_dict('records')
+            'subspace': subspace_data.to_dict('index')
         }
 
     def get_insight_count_for_record_by_name(self, name):
@@ -153,7 +155,8 @@ class DataService():
         subspace_data['star_count'] = ""
         for index, row in subspace_data.iterrows():
             if '*' in row.tolist():
-                subspace_data['star_count'][index] = row.tolist().count('*')
+                count = row.tolist().count('*')
+                subspace_data['star_count'][index] = count
             else:
                 subspace_data['star_count'][index] = 0
 
@@ -161,8 +164,6 @@ class DataService():
         iid_sid_df.sort_values(by=['iid_count', 'star_count'], inplace=True, ascending=False)
         iid_sid_df.reset_index(inplace=True, drop=True)
         res = iid_sid_df.to_dict('index')
-        print("get_insight_count_for_subspace_by_name")
-        print(iid_sid_df)
         return res
 
     def get_subspace_count_for_record_by_name(self, name):
