@@ -168,6 +168,8 @@ class DataService():
         iid_sid_df.sort_values(by=['iid_count', 'star_count'], inplace=True, ascending=False)
         iid_sid_df.reset_index(inplace=True, drop=True)
         res = iid_sid_df.to_dict('index')
+        print("get_insight_count_for_subspace_by_name!!!!")
+        print(iid_sid_df)
         return res
 
     def get_subspace_count_for_record_by_name(self, name):
