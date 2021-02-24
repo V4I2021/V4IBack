@@ -2,6 +2,10 @@ import os
 import json
 import pandas as pd
 from flask_caching import Cache
+from sklearn.neighbors.kde import KernelDensity
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 cache = Cache()
 
@@ -12,6 +16,8 @@ INSIGHT_FOLDER = os.path.join(ROOT_PATH, 'data/insight')
 RECORD_FOLDER = os.path.join(ROOT_PATH, 'data/record')
 SID_CID_FOLDER = os.path.join(ROOT_PATH, 'data/sid_cid')
 SUBSPACE_FOLDER = os.path.join(ROOT_PATH, 'data/subspace')
+
+cnt = 0
 
 
 class DataService():
@@ -66,9 +72,9 @@ class DataService():
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
         record_data = self.__get_record_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
-        print(subspace_data)
-        print("---------------------")
-        print(subspace_data.to_dict('index'))
+        # print(subspace_data)
+        # print("---------------------")
+        # print(subspace_data.to_dict('index'))
         return {
             'record': record_data.to_dict('records'),
             'insight': insight_data.to_dict('records'),
@@ -168,8 +174,8 @@ class DataService():
         iid_sid_df.sort_values(by=['iid_count', 'star_count'], inplace=True, ascending=False)
         iid_sid_df.reset_index(inplace=True, drop=True)
         res = iid_sid_df.to_dict('index')
-        print("get_insight_count_for_subspace_by_name!!!!")
-        print(iid_sid_df)
+        # print("get_insight_count_for_subspace_by_name!!!!")
+        # print(iid_sid_df)
         return res
 
     def get_subspace_count_for_record_by_name(self, name):
@@ -182,3 +188,63 @@ class DataService():
         iids_df.reset_index(inplace=True, drop=True)
         res = iids_df.to_dict('index')
         return res
+
+    @cache.memoize(timeout=50)
+    def get_data_info_by_name(self, name):
+        global cnt
+        record_data = self.__get_record_by_name(name)
+        insight_data, _, _ = self.__get_insight_by_name(name)
+        record_data = record_data.drop(columns=['cid'])
+
+        data_info = {
+            'dataName': name,
+            'dataDescription': '',
+            'rowCnt': record_data.shape[0],
+            'colCnt': record_data.shape[1],
+            'colName': [],
+            'colType': [],
+            'colValueType': [],
+            'colValue': []
+        }
+
+        for value_type in record_data.dtypes.tolist():
+            value_type = str(value_type)
+            if value_type != 'int64' and value_type != 'float64':
+                data_info['colValueType'].append('categorical')
+            else:
+                data_info['colValueType'].append(value_type.rstrip('64'))
+
+        if name == 'carSales1':
+            data_info['dataDescription'] = 'Describe vehicle sales.'
+        elif name == 'carSales2':
+            data_info['dataDescription'] = 'Describe vehicle sales in more detail.'
+        elif name == 'Census':
+            data_info['dataDescription'] = 'Describe demographic information.'
+
+        data_info['colName'] = record_data.columns.values.tolist()
+        measure_list = insight_data['measure'].unique()
+        for i in range(len(data_info['colName'])):
+            col = data_info['colName'][i]
+            if col in measure_list:
+                data_info['colType'].append('measure')
+            else:
+                data_info['colType'].append('attribute')
+
+            if data_info['colValueType'][i] == 'int' \
+                    or data_info['colValueType'][i] == 'float':
+                p = sns.kdeplot(record_data[col].values)
+                lines = [obj for obj in p.findobj() if str(type(obj)) == "<class 'matplotlib.lines.Line2D'>"]
+                x, y = lines[cnt].get_data()[0].tolist(), lines[cnt].get_data()[1].tolist()
+                data_info['colValue'].append([x, y,
+                                              round(min(x), 2), round(max(x), 2),
+                                              min(y), max(y)])
+                cnt += 1
+            else:
+                cnt_dict = record_data[col].value_counts().to_dict()
+                value_list = list(cnt_dict.values())
+                upper_bound = value_list[0]
+                while upper_bound % 5 != 0 or upper_bound % 2 != 0:
+                    upper_bound += 1
+                data_info['colValue'].append([list(cnt_dict), value_list, upper_bound])
+
+        return data_info
