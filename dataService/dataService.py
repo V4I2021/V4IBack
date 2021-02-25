@@ -1,11 +1,7 @@
 import os
-import json
 import pandas as pd
 from flask_caching import Cache
-from sklearn.neighbors.kde import KernelDensity
-import numpy as np
 import seaborn as sns
-import matplotlib.pyplot as plt
 
 cache = Cache()
 
@@ -17,7 +13,7 @@ RECORD_FOLDER = os.path.join(ROOT_PATH, 'data/record')
 SID_CID_FOLDER = os.path.join(ROOT_PATH, 'data/sid_cid')
 SUBSPACE_FOLDER = os.path.join(ROOT_PATH, 'data/subspace')
 
-cnt = 0
+sns_counter = 0
 
 
 class DataService():
@@ -58,8 +54,7 @@ class DataService():
         return df, df.head(0).columns.values.tolist()[0:-1]
 
     def __get_record_by_subspace(self, name, sid):
-        sid_cid_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
-        sid_cid_data = pd.read_csv(sid_cid_path)
+        sid_cid_data = self.__get_sid_cid_by_name(name)
         record_data = self.__get_record_by_name(name)
 
         df = pd.merge(sid_cid_data, record_data, on=['cid'])
@@ -180,18 +175,18 @@ class DataService():
 
     def get_subspace_count_for_record_by_name(self, name):
         sid_cid_df = self.__get_sid_cid_by_name(name)
-        insight_data, _, _ = self.__get_insight_by_name(name)
-        iids_df = pd.merge(insight_data, sid_cid_df, on='sid', how='inner')
-        iids_df = iids_df.groupby('cid')['iid'].apply(list).reset_index(name='iids')
-        iids_df['iid_count'] = [len(id_list) for id_list in iids_df['iids']]
-        iids_df.sort_values(by='iid_count', inplace=True, ascending=False)
-        iids_df.reset_index(inplace=True, drop=True)
-        res = iids_df.to_dict('index')
+        record_data = self.__get_record_by_name(name)
+        df = pd.merge(record_data, sid_cid_df, on='cid', how='inner')
+        df = df.groupby('cid')['sid'].apply(list).reset_index(name='sid')
+        df['sid_count'] = [len(id_list) for id_list in df['sid']]
+        df.sort_values(by='sid_count', inplace=True, ascending=False)
+        df.reset_index(inplace=True, drop=True)
+        res = df.to_dict('index')
         return res
 
     @cache.memoize(timeout=50)
     def get_data_info_by_name(self, name):
-        global cnt
+        global sns_counter
         record_data = self.__get_record_by_name(name)
         insight_data, _, _ = self.__get_insight_by_name(name)
         record_data = record_data.drop(columns=['cid'])
@@ -234,11 +229,11 @@ class DataService():
                     or data_info['colValueType'][i] == 'float':
                 p = sns.kdeplot(record_data[col].values)
                 lines = [obj for obj in p.findobj() if str(type(obj)) == "<class 'matplotlib.lines.Line2D'>"]
-                x, y = lines[cnt].get_data()[0].tolist(), lines[cnt].get_data()[1].tolist()
+                x, y = lines[sns_counter].get_data()[0].tolist(), lines[sns_counter].get_data()[1].tolist()
                 data_info['colValue'].append([x, y,
                                               round(min(x), 2), round(max(x), 2),
                                               min(y), max(y)])
-                cnt += 1
+                sns_counter += 1
             else:
                 cnt_dict = record_data[col].value_counts().to_dict()
                 value_list = list(cnt_dict.values())
