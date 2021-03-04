@@ -167,7 +167,10 @@ class DataService():
 
         iid_sid_df = subspace_data[['sid', 'star_count']].merge(iid_sid_df, on='sid', how='inner')
         iid_sid_df.sort_values(by=['iid_count', 'star_count'], inplace=True, ascending=False)
+        subspace_data, _ = self.__get_subspace_by_name(name)
+        iid_sid_df = pd.merge(iid_sid_df, subspace_data, on='sid', how='inner')
         iid_sid_df.reset_index(inplace=True, drop=True)
+        print(iid_sid_df)
         res = iid_sid_df.to_dict('index')
         # print("get_insight_count_for_subspace_by_name!!!!")
         # print(iid_sid_df)
@@ -243,3 +246,15 @@ class DataService():
                 data_info['colValue'].append([list(cnt_dict), value_list, upper_bound])
 
         return data_info
+
+    def get_data_attr_map_by_name(self, name):
+        record_data = self.__get_record_by_name(name)
+        _, feature_data = self.__get_subspace_by_name(name)
+        attr_map = dict()
+        for feature in feature_data:
+            print(record_data[feature])
+            print(record_data[feature].unique())
+            feature_list = record_data[feature].unique().tolist()
+            attr_map[feature] = dict((k, i) for (i, k) in enumerate(feature_list))
+        print(attr_map.__class__)
+        return attr_map

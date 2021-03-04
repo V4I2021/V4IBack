@@ -71,5 +71,13 @@ def get_data_info_by_name():
     return json.dumps(data, sort_keys=False)
 
 
+@app.route('/api/get_data_attr_map_by_name', methods=['POST'])
+def get_data_attr_map_by_name():
+    params = request.json
+    name = params['dataName']
+    data = dm.get_data_attr_map_by_name(name)
+    return json.dumps(data, sort_keys=False)
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=8888)
