@@ -2,7 +2,8 @@ import os
 import pandas as pd
 from flask_caching import Cache
 import seaborn as sns
-
+import numpy as np
+import math
 cache = Cache()
 
 FILE_ABS_PATH = os.path.dirname(__file__)
@@ -67,9 +68,6 @@ class DataService():
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
         record_data = self.__get_record_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
-        # print(subspace_data)
-        # print("---------------------")
-        # print(subspace_data.to_dict('index'))
         return {
             'record': record_data.to_dict('records'),
             'insight': insight_data.to_dict('records'),
@@ -170,10 +168,7 @@ class DataService():
         subspace_data, _ = self.__get_subspace_by_name(name)
         iid_sid_df = pd.merge(iid_sid_df, subspace_data, on='sid', how='inner')
         iid_sid_df.reset_index(inplace=True, drop=True)
-        print(iid_sid_df)
         res = iid_sid_df.to_dict('index')
-        # print("get_insight_count_for_subspace_by_name!!!!")
-        # print(iid_sid_df)
         return res
 
     def get_subspace_count_for_record_by_name(self, name):
@@ -252,9 +247,21 @@ class DataService():
         _, feature_data = self.__get_subspace_by_name(name)
         attr_map = dict()
         for feature in feature_data:
-            print(record_data[feature])
-            print(record_data[feature].unique())
             feature_list = record_data[feature].unique().tolist()
             attr_map[feature] = dict((k, i) for (i, k) in enumerate(feature_list))
-        print(attr_map.__class__)
         return attr_map
+
+    def get_data_feature_attribution_by_name(self, name):
+        record_data = self.__get_record_by_name(name)
+        # feature_attr = {'feature_name': {'value_name' : [start_angle, end_angle]}}
+        _, feature_data = self.__get_subspace_by_name(name)
+        result = {}
+        for feature in feature_data:
+            value_count = record_data[feature].value_counts().sort_values(ascending=False)
+            value_angle = (value_count / value_count.sum() * 2 * math.pi).tolist()
+            start_angle = np.concatenate(([0.0], np.cumsum(value_angle)))
+            end_angle = np.cumsum(value_angle)
+            feature_res = {str(val): [start_angle[idx], end_angle[idx]] for (idx, val) in enumerate(value_count.keys())}
+            result[feature] = feature_res
+        # feature_cid_count = {feature: record_data[feature].value_counts().to_dict() for feature in feature_data}
+        return result
