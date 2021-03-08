@@ -249,11 +249,12 @@ class DataService():
         for feature in feature_data:
             feature_list = record_data[feature].unique().tolist()
             attr_map[feature] = dict((k, i) for (i, k) in enumerate(feature_list))
+        # {'Year': {2007: 0, 2008: 1, 2009: 2, 2010: 3, 2011: 4},
         return attr_map
 
     def get_data_feature_attribution_by_name(self, name):
         record_data = self.__get_record_by_name(name)
-        # feature_attr = {'feature_name': {'value_name' : [start_angle, end_angle]}}
+        # result = {'feature_name': {'value_name' : [start_angle, end_angle]}}
         _, feature_data = self.__get_subspace_by_name(name)
         result = {}
         for feature in feature_data:
