@@ -153,33 +153,11 @@ class DataService():
         insight_data, _, _ = self.__get_insight_by_name(name)
         iid_sid_df = insight_data[['iid', 'sid']].groupby('sid')['iid'].apply(list).reset_index(name='iids')
         iid_sid_df['iid_count'] = [len(id_list) for id_list in iid_sid_df['iids']]
-
-        subspace_data, _ = self.__get_subspace_by_name(name)
-        subspace_data['star_count'] = ""
-        for index, row in subspace_data.iterrows():
-            if '*' in row.tolist():
-                count = row.tolist().count('*')
-                subspace_data['star_count'][index] = count
-            else:
-                subspace_data['star_count'][index] = 0
-
-        iid_sid_df = subspace_data[['sid', 'star_count']].merge(iid_sid_df, on='sid', how='inner')
-        iid_sid_df.sort_values(by=['iid_count', 'star_count'], inplace=True, ascending=False)
         subspace_data, _ = self.__get_subspace_by_name(name)
         iid_sid_df = pd.merge(iid_sid_df, subspace_data, on='sid', how='inner')
+        iid_sid_df.sort_values(by=['iid_count'], inplace=True, ascending=False)
         iid_sid_df.reset_index(inplace=True, drop=True)
         res = iid_sid_df.to_dict('index')
-        return res
-
-    def get_subspace_count_for_record_by_name(self, name):
-        sid_cid_df = self.__get_sid_cid_by_name(name)
-        record_data = self.__get_record_by_name(name)
-        df = pd.merge(record_data, sid_cid_df, on='cid', how='inner')
-        df = df.groupby('cid')['sid'].apply(list).reset_index(name='sid')
-        df['sid_count'] = [len(id_list) for id_list in df['sid']]
-        df.sort_values(by='sid_count', inplace=True, ascending=False)
-        df.reset_index(inplace=True, drop=True)
-        res = df.to_dict('index')
         return res
 
     @cache.memoize(timeout=50)

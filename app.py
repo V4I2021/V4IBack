@@ -55,14 +55,6 @@ def get_insight_count_for_subspace():
     return json.dumps(data, sort_keys=False)
 
 
-@app.route('/api/get_subspace_count_for_record', methods=['POST'])
-def get_subspace_count_for_record():
-    params = request.json
-    dataName = params['dataName']
-    data = dm.get_subspace_count_for_record_by_name(dataName)
-    return json.dumps(data, sort_keys=False)
-
-
 @app.route('/api/get_data_info_by_name', methods=['POST'])
 def get_data_info_by_name():
     params = request.json
