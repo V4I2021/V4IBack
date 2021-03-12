@@ -1,9 +1,17 @@
+import datetime
 import os
 import pandas as pd
 from flask_caching import Cache
 import seaborn as sns
+from scipy.stats import pearsonr
+
 import numpy as np
 import math
+
+from sklearn.cluster import DBSCAN
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import StandardScaler
+
 cache = Cache()
 
 FILE_ABS_PATH = os.path.dirname(__file__)
@@ -44,15 +52,15 @@ class DataService():
 
     @cache.memoize(timeout=50)
     def __get_sid_cid_by_name(self, name):
-        record_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
-        df = pd.read_csv(record_path)
+        sid_cid_path = os.path.join(SID_CID_FOLDER, 'sid_cid_{}.csv'.format(name))
+        df = pd.read_csv(sid_cid_path)
         return df
 
     @cache.memoize(timeout=50)
     def __get_subspace_by_name(self, name):
         subspace_path = os.path.join(SUBSPACE_FOLDER, 'subspace_{}.csv'.format(name))
         df = pd.read_csv(subspace_path)
-        return df, df.head(0).columns.values.tolist()[0:-1]
+        return df, df.columns.values.tolist()[0:-1]
 
     def __get_record_by_subspace(self, name, sid):
         sid_cid_data = self.__get_sid_cid_by_name(name)
@@ -62,6 +70,16 @@ class DataService():
         df = df.loc[df['sid'] == sid]
         df = df.drop(['sid', 'cid'], axis=1)
         return df
+
+    def __get_subspace_str(self, subspace_col, row):
+        subspace = ''
+        for i in range(len(subspace_col)):
+            col = subspace_col[i]
+            if row[col].tolist()[0] != '*':
+                subspace += col + ' is ' + row[col].tolist()[0] + ', '
+        if subspace[-2:] == ', ':
+            subspace = subspace[0:-2]
+        return subspace
 
     def get_data_by_name(self, name):
         edge_data = self.__get_edge_by_name(name)
@@ -91,7 +109,9 @@ class DataService():
 
     def get_insight_by_iid(self, iid, name):
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
+        subspace_data, feature_data = self.__get_subspace_by_name(name)
         insight = insight_data.loc[insight_data['iid'] == iid]
+        insight = pd.merge(insight, subspace_data, on='sid', how='inner')
         record = self.__get_record_by_subspace(name, insight['sid'].iloc[0])
 
         insight_name = insight['insight'].iloc[0]
@@ -100,33 +120,116 @@ class DataService():
         if breakdown_value.isdigit():
             breakdown_value = int(breakdown_value)
         measure = insight['measure'].iloc[0]
+        subspace = self.__get_subspace_str(feature_data, insight)
 
         if insight_name == 'top1':
             record = record.groupby(breakdown, as_index=False).agg({measure: 'sum'})
             record = record.sort_values(by=measure, ascending=False).iloc[0:10]
+            measure_value = record[measure].tolist()
+            sentence = 'Given the statistics is {}, ' \
+                       'the maximum value of the {} data is {} ' \
+                       'when {}{}{} is {}.' \
+                .format(measure, 'total', measure_value[0],
+                        subspace, (' and ' if subspace != '' else ''),
+                        breakdown, breakdown_value)
             return {
                 'insight_name': insight_name,
+                'breakdown': breakdown,
+                'breakdown_value': record[breakdown].tolist(),
                 'measure': measure,
-                'measure_value': record[measure].tolist()
+                'measure_value': measure_value,
+                'sentence': sentence
             }
         elif insight_name == 'trend':
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
+
+            breakdown_value = record[breakdown]
+
+            if breakdown == 'date' or breakdown == 'Date':
+                record[breakdown] = pd.to_datetime(record[breakdown])
+            try:
+                x = record[breakdown].map(datetime.datetime.toordinal).values
+            except:
+                x = record[breakdown].values
+
+            x = np.array(x).reshape(-1, 1)
+            y = np.array(record[measure]).reshape(-1, 1)
+            reg = LinearRegression().fit(x, y)
+            slope = reg.coef_[0][0]
+
+            sentence = 'The trend of the {} {} over {}s' \
+                       '{}{} is {}.' \
+                .format('total', measure, breakdown,
+                        (' when ' if subspace != '' else ' in all data'),
+                        ' and '.join(subspace.rsplit(', ', 1)),
+                        ('increasing' if slope >= 0 else 'decreasing'))
             return {
                 'insight_name': insight_name,
                 'breakdown': breakdown,
                 'measure': measure,
-                'breakdown_value': record[breakdown].tolist(),
-                'measure_value': record[measure].tolist()
+                'breakdown_value': breakdown_value.tolist(),
+                'measure_value': record[measure].tolist(),
+                'sentence': sentence
             }
         elif insight_name == 'correlation':
-            # todo
-            return 0
+            col_list = record.columns.values.tolist()
+            col_list.remove(insight['measure'].values[0])
+            corr_col_list = [('Correlated ' + c) for c in col_list]
+            corr_record = self.__get_record_by_name(self, name)
+            for i in range(len(corr_col_list)):
+                value = insight[corr_col_list[i]].values[0]
+                if value != '*':
+                    corr_record = corr_record.loc[corr_record[col_list[i]] == value]
+            corr_record.drop(['cid'], axis=1, inplace=True)
+
+            record = record.groupby(breakdown, as_index=False).agg(
+                {breakdown: 'first', measure: 'sum'})
+            corr_record = corr_record.groupby(breakdown, as_index=False).agg(
+                {breakdown: 'first', measure: 'sum'})
+            y1 = record[measure].values
+            y2 = corr_record[measure].values
+            corr, _ = pearsonr(y1, y2)
+
+            corr_col = [('Correlated ' + c) for c in feature_data]
+            corr_subspace = self.__get_subspace_str(corr_col, insight)
+
+            sentence = 'The Pearson correlation between' \
+                       '{}{} and{}{} is {}.' \
+                .format((' subset with ' if subspace != '' else ' all data'),
+                        ' and '.join(subspace.rsplit(', ', 1)),
+                        (' subset with ' if corr_subspace != '' else ' all data'),
+                        ' and '.join(corr_subspace.rsplit(', ', 1)),
+                        round(corr, 2))
+
+            return {
+                'insight_name': insight_name,
+                'breakdown': breakdown,
+                'breakdown_value': record[breakdown].tolist(),
+                'measure': measure,
+                'measure_value': [y1, y2],
+                'sentence': sentence
+            }
         elif insight_name == 'change point' or insight_name == 'outlier':
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
             # todo: int value might be read as string
             y = record.loc[record[breakdown] == breakdown_value][measure].iloc[0]
+
+            if insight_name == 'change point':
+                sentence = 'Among {}s{}{}, ' \
+                           'change occurs in {} ' \
+                           'and its {} {} is {}.' \
+                    .format(breakdown, (' when ' if subspace != '' else ' in all data'),
+                            ' and '.join(subspace.rsplit(', ', 1)),
+                            breakdown_value, 'total', measure, y)
+
+            else:
+                sentence = 'Among {}s{}{}, ' \
+                           'the {} {} of {} in {} is an anomaly.' \
+                    .format(breakdown, (' when ' if subspace != '' else ' in all data'),
+                            ' and '.join(subspace.rsplit(', ', 1)),
+                            'total', measure, y, breakdown_value)
 
             return {
                 'insight_name': insight_name,
@@ -135,16 +238,107 @@ class DataService():
                 'breakdown_value': record[breakdown].tolist(),
                 'measure_value': record[measure].tolist(),
                 'x': str(breakdown_value),
-                'y': str(y)
+                'y': str(y),
+                'sentence': sentence
             }
         elif insight_name == 'attribution':
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
             record = record.sort_values(by=measure)
+
+            breakdown_value = record[breakdown].tolist()
+            percentage = (record[measure] / record[measure].sum()).tolist()
+
+            breakdown_value_list = ''
+            percentage_list = ''
+            for i in range(len(breakdown_value)):
+                breakdown_value_list += breakdown_value[i] + ', '
+                percentage[i] = round(percentage[i], 2)
+                percentage_list += str(percentage[i]) + ', '
+            if breakdown_value_list[-2:] == ', ':
+                breakdown_value_list = breakdown_value_list[0:-2]
+                percentage_list = percentage_list[0:-2]
+            sentence = '{} makes up {} ' \
+                       'of the {} {}{}{}.' \
+                .format(' and '.join(breakdown_value_list.rsplit(', ', 1)),
+                        ' and '.join(percentage_list.rsplit(', ', 1)),
+                        'total', measure, (' when ' if subspace != '' else ' in all data'),
+                        ' and '.join(subspace.rsplit(', ', 1)))
+
             return {
                 'insight_name': insight_name,
-                'breakdown_value': record[breakdown].tolist(),
-                'measure_value': record[measure].tolist()
+                'breakdown_value': breakdown_value,
+                'measure_value': record[measure].tolist(),
+                'sentence': sentence,
+                'percentage': percentage
+            }
+        elif insight_name == 'cross measure correlation':
+            measures = measure.split(';')
+            record = record.groupby(breakdown, as_index=False).agg(
+                {breakdown: 'first', measures[0]: 'sum', measures[1]: 'sum'})
+            record = record.sort_values(by=measures[0])
+
+            x_value = record[measures[0]].values
+            y_value = record[measures[1]].values
+            reg = LinearRegression().fit(x_value.reshape(-1, 1), y_value.reshape(-1, 1))
+
+            sentence = '{} and {} are linear correlated' \
+                       '{}{}{}being grouped by {}.' \
+                .format(measures[0], measures[1],
+                        (' when ' if subspace != '' else ' in all data'),
+                        ' and '.join(subspace.rsplit(', ', 1)),
+                        (' and ' if subspace != '' else ' when '),
+                        breakdown)
+
+            return {
+                'insight_name': insight_name,
+                'x_value': x_value.tolist(),
+                'y_value': y_value.tolist(),
+                'line_y_value': [reg.predict(x_value[0].reshape(-1, 1))[0][0],
+                                 reg.predict(x_value[-1].reshape(-1, 1))[0][0]],
+                'sentence': sentence
+            }
+        elif insight_name == 'clustering':
+            measures = measure.split(';')
+            record = record.groupby(breakdown, as_index=False).agg(
+                {breakdown: 'first', measures[0]: 'sum', measures[1]: 'sum'})
+            record = record.sort_values(by=measures[0])
+
+            x_value = record[measures[0]].values
+            y_value = record[measures[1]].values
+            X = np.vstack((x_value, y_value)).T
+            X_scale = StandardScaler().fit_transform(X)
+            db = DBSCAN(eps=0.3, min_samples=5).fit(X_scale)
+            core_samples_mask = np.zeros_like(db.labels_, dtype=bool)
+            core_samples_mask[db.core_sample_indices_] = True
+            labels = db.labels_
+
+            noise = ''
+            if -1 in labels:
+                breakdown_value = record[breakdown].values
+                cnt = 2
+                for i, label in enumerate(labels):
+                    if label == -1 and cnt > 0:
+                        noise += str(breakdown_value[i]) + ', '
+                        cnt -= 1
+                noise += 'etc'
+
+            sentence = '{} and {} form clusters' \
+                       '{}{}{}being grouped by {}{}{}.' \
+                .format(measures[0], measures[1],
+                        (' when ' if subspace != '' else ' in all data'),
+                        ' and '.join(subspace.rsplit(', ', 1)),
+                        (' and ' if subspace != '' else ' when '),
+                        breakdown,
+                        (', except for ' if noise != '' else ''),
+                        noise)
+
+            return {
+                'insight_name': insight_name,
+                'x_value': x_value.tolist(),
+                'y_value': y_value.tolist(),
+                'label': labels.tolist(),
+                'sentence': sentence
             }
         else:
             return 0
@@ -158,6 +352,17 @@ class DataService():
         iid_sid_df.sort_values(by=['iid_count'], inplace=True, ascending=False)
         iid_sid_df.reset_index(inplace=True, drop=True)
         res = iid_sid_df.to_dict('index')
+        return res
+
+    def get_subspace_count_for_record_by_name(self, name):
+        sid_cid_df = self.__get_sid_cid_by_name(name)
+        record_data = self.__get_record_by_name(name)
+        df = pd.merge(record_data, sid_cid_df, on='cid', how='inner')
+        df = df.groupby('cid')['sid'].apply(list).reset_index(name='sid')
+        df['sid_count'] = [len(id_list) for id_list in df['sid']]
+        df.sort_values(by='sid_count', inplace=True, ascending=False)
+        df.reset_index(inplace=True, drop=True)
+        res = df.to_dict('index')
         return res
 
     @cache.memoize(timeout=50)
@@ -244,14 +449,3 @@ class DataService():
             result[feature] = feature_res
         # feature_cid_count = {feature: record_data[feature].value_counts().to_dict() for feature in feature_data}
         return result
-
-    def get_subspace_count_for_record_by_name(self, name):
-        sid_cid_df = self.__get_sid_cid_by_name(name)
-        record_data = self.__get_record_by_name(name)
-        df = pd.merge(record_data, sid_cid_df, on='cid', how='inner')
-        df = df.groupby('cid')['sid'].apply(list).reset_index(name='sid')
-        df['sid_count'] = [len(id_list) for id_list in df['sid']]
-        df.sort_values(by='sid_count', inplace=True, ascending=False)
-        df.reset_index(inplace=True, drop=True)
-        res = df.to_dict('index')
-        return res
