@@ -244,3 +244,14 @@ class DataService():
             result[feature] = feature_res
         # feature_cid_count = {feature: record_data[feature].value_counts().to_dict() for feature in feature_data}
         return result
+
+    def get_subspace_count_for_record_by_name(self, name):
+        sid_cid_df = self.__get_sid_cid_by_name(name)
+        record_data = self.__get_record_by_name(name)
+        df = pd.merge(record_data, sid_cid_df, on='cid', how='inner')
+        df = df.groupby('cid')['sid'].apply(list).reset_index(name='sid')
+        df['sid_count'] = [len(id_list) for id_list in df['sid']]
+        df.sort_values(by='sid_count', inplace=True, ascending=False)
+        df.reset_index(inplace=True, drop=True)
+        res = df.to_dict('index')
+        return res

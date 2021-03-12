@@ -37,6 +37,12 @@ def get_insight_count_for_record():
     data = dm.get_insight_count_for_record_by_name(dataName)
     return json.dumps(data, sort_keys=False)
 
+@app.route('/api/get_subspace_count_for_record', methods=['POST'])
+def get_subspace_count_for_record():
+    params = request.json
+    dataName = params['dataName']
+    data = dm.get_subspace_count_for_record_by_name(dataName)
+    return json.dumps(data, sort_keys=False)
 
 @app.route('/api/get_graph_data_by_iid', methods=['POST'])
 def get_graph_data_by_iid():
