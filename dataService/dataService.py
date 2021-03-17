@@ -84,10 +84,10 @@ class DataService():
     def get_data_by_name(self, name):
         edge_data = self.__get_edge_by_name(name)
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
-        record_data = self.__get_record_by_name(name)
+        # record_data = self.__get_record_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
         return {
-            'record': record_data.to_dict('records'),
+            # 'record': record_data.to_dict('records'),
             'insight': insight_data.to_dict('records'),
             'edge': edge_data.to_dict('records'),
             'feature': feature_data,
@@ -434,6 +434,17 @@ class DataService():
             attr_map[feature] = dict((k, i) for (i, k) in enumerate(feature_list))
         # {'Year': {2007: 0, 2008: 1, 2009: 2, 2010: 3, 2011: 4},
         return attr_map
+
+    def get_subspace_range_by_name(self, name):
+        insight, _, _ = self.__get_insight_by_name(name)
+        sid_list = np.unique(insight['sid'].tolist())
+        subspace, feature_data = self.__get_subspace_by_name(name)
+        subspace = subspace.loc[subspace['sid'].isin(sid_list)]
+        subspace_range = dict()
+        for feature in feature_data:
+            feature_list = subspace[feature].unique().tolist()
+            subspace_range[feature] = feature_list
+        return subspace_range
 
     def get_data_feature_attribution_by_name(self, name):
         record_data = self.__get_record_by_name(name)
