@@ -86,12 +86,14 @@ class DataService():
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
         record_data = self.__get_record_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
+        insight_cnt = insight_data['insight'].value_counts().to_dict()
         return {
             'record': record_data.to_dict('records'),
             'insight': insight_data.to_dict('records'),
             'edge': edge_data.to_dict('records'),
             'feature': feature_data,
             'insight_name': insight_name,
+            'insight_count': [insight_cnt[x] for x in insight_name],
             'insight_type': insight_type,
             'subspace': subspace_data.to_dict('index')
         }
