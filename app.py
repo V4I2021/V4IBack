@@ -101,7 +101,9 @@ def getSimilarInsight():
     name = params['name']
     sid = params['sid']
     feature = params['feature']
-    data = dm.get_similar_insight(feature, sid, name)
+    breakdown = params['breakdown']
+    breakdown_value = params['breakdown_value']
+    data = dm.get_similar_insight(feature, sid, name, breakdown, breakdown_value)
     return json.dumps(data, sort_keys=False)
 
 

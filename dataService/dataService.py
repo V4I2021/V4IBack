@@ -478,23 +478,40 @@ class DataService():
         # feature_cid_count = {feature: record_data[feature].value_counts().to_dict() for feature in feature_data}
         return result
 
-    def get_similar_insight(self, feature, sid, name):
+    def get_similar_insight(self, feature, sid, name, breakdown, breakdown_value):
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
 
         subspace = subspace_data.loc[subspace_data['sid'] == sid]
+        # print(subspace, feature, breakdown, breakdown_value)
         feature_value = subspace[feature].tolist()[0]
-        # print('feature: {}, value: {}'.format(feature, feature_value))
+        if feature_value == '*':
+            if breakdown == feature:
+                feature_value = breakdown_value
+            else:
+                return {
+                    'similar_iid': [],
+                    'similar_sid': []
+                }
 
-        similar_subspace = subspace_data.loc[subspace_data[feature] == feature_value]
+        if ';' in feature_value:
+            feature_value = breakdown_value.split(';')
+        else:
+            feature_value = [feature_value]
+
         similar_iid = []
         similar_sid = []
-        for index, sub in similar_subspace.iterrows():
-            insights = insight_data.loc[insight_data['sid'] == sub['sid']]
-            similar_iid.extend(insights['iid'].tolist())
-            similar_sid.extend(insights['sid'].tolist())
+        for value in feature_value:
+            if value == '*':
+                continue
+            similar_subspace = subspace_data.loc[subspace_data[feature] == value]
+
+            for index, sub in similar_subspace.iterrows():
+                insights = insight_data.loc[insight_data['sid'] == sub['sid']]
+                similar_iid.extend(insights['iid'].tolist())
+                similar_sid.extend(insights['sid'].tolist())
 
         return {
-            'similar_iid': similar_iid,
-            'similar_sid': similar_sid
+            'similar_iid': list(set(similar_iid)),
+            'similar_sid': list(set(similar_sid))
         }
