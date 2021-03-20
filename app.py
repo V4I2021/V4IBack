@@ -99,11 +99,9 @@ def get_data_subspace_range_by_name():
 def getSimilarInsight():
     params = request.json
     name = params['name']
-    iid = params['iid']
     sid = params['sid']
     feature = params['feature']
-    feature_value = params['feature_value']
-    data = dm.get_similar_insight(feature, feature_value, iid, sid, name)
+    data = dm.get_similar_insight(feature, sid, name)
     return json.dumps(data, sort_keys=False)
 
 
