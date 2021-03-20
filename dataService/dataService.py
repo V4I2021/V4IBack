@@ -501,6 +501,7 @@ class DataService():
 
         similar_iid = []
         similar_sid = []
+        similar_insight_name = []
         for value in feature_value:
             if value == '*':
                 continue
@@ -510,8 +511,10 @@ class DataService():
                 insights = insight_data.loc[insight_data['sid'] == sub['sid']]
                 similar_iid.extend(insights['iid'].tolist())
                 similar_sid.extend(insights['sid'].tolist())
+                similar_insight_name.extend(insights['insight'].tolist())
 
         return {
-            'similar_iid': list(set(similar_iid)),
-            'similar_sid': list(set(similar_sid))
+            'similar_iid': similar_iid,
+            'similar_sid': similar_sid,
+            'similar_insight_name': similar_insight_name
         }
