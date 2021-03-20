@@ -462,3 +462,32 @@ class DataService():
             result[feature] = feature_res
         # feature_cid_count = {feature: record_data[feature].value_counts().to_dict() for feature in feature_data}
         return result
+
+    def get_similar_insight(self, feature, feature_value, iid, sid, name):
+        insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
+        subspace_data, feature_data = self.__get_subspace_by_name(name)
+
+        subspace = subspace_data.loc[subspace_data['sid'] == sid]
+        # print('feature: {}, value: {}'.format(feature, feature_value))
+        if feature_value == '-1':
+            for f in feature_data:
+                f_value = subspace[f].tolist()[0]
+                if f_value != '*':
+                    feature = f
+                    feature_value = f_value
+                    # print('new feature: {}, value: {}'.format(feature, feature_value))
+                    break
+
+        similar_subspace = subspace_data.loc[subspace_data[feature] == feature_value]
+        similar_iid = []
+        similar_sid = []
+        for index, sub in similar_subspace.iterrows():
+            insights = insight_data.loc[insight_data['sid'] == sub['sid']]
+            similar_iid.extend(insights['iid'].tolist())
+            similar_sid.extend(insights['sid'].tolist())
+
+        # print(similar_iid, similar_sid)
+        return {
+            'similar_iid': similar_iid,
+            'similar_sid': similar_sid
+        }
