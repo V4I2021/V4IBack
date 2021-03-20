@@ -183,8 +183,8 @@ class DataService():
             col_list.remove(insight['measure'].values[0])
             record = self.__get_record_by_name(name)
             record.drop(['cid'], axis=1, inplace=True)
-            print("--------------record-------------")
-            print(record)
+            # print("--------------record-------------")
+            # print(record)
             for i in range(len(col_list)):
                 value = insight[col_list[i]].values[0]
                 if value != '*':
@@ -195,40 +195,36 @@ class DataService():
                 corr_record = record.copy()
             if breakdown_value[0] != '*':
                 record = record.loc[record[insight['breakdown'].values[0]] == breakdown_value[0]]
-            print("--------------record2------------")
-            print(record)
-            print("--------------corr record--------")
-            print(corr_record)
+            # print("--------------record2------------")
+            # print(record)
+            # print("--------------corr record--------")
+            # print(corr_record)
             corr_record = corr_record.groupby(time_col, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
             record = record.groupby(time_col, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
-            print("----------------groupby-----------")
-            print(corr_record)
-            print(record)
+            # print("----------------groupby-----------")
+            # print(corr_record)
+            # print(record)
             y1 = record[measure].values
             y2 = corr_record[measure].values
             corr, _ = pearsonr(y1, y2)
 
-            sentence = "The {} of {} and {} are correlated in {}"\
-                .format(measure, breakdown_value[0], breakdown_value[1],
-                        subspace)
+            sentence = "The {} of {} and {} are correlated in {}." \
+                .format(measure, breakdown_value[0],
+                        (breakdown_value[1] if breakdown_value[1] != '*' else 'all data'),
+                        ('the dataset' if subspace == '' else subspace))
 
-
-            # sentence = 'The Pearson correlation between' \
-            #            '{}{} and{}{} is {}.' \
-            #     .format((' subset with ' if subspace != '' else ' all data'),
-            #             ' and '.join(subspace.rsplit(', ', 1)),
-            #             (' subset with ' if corr_subspace != '' else ' all data'),
-            #             ' and '.join(corr_subspace.rsplit(', ', 1)),
-            #             round(corr, 2))
+            y1 = y1.tolist()
+            y2 = y2.tolist()
 
             return {
                 'insight_name': insight_name,
-                'breakdown': breakdown,
-                'breakdown_value': record[breakdown].tolist(),
+                'time_col': time_col,
+                'time_col_value': record[time_col].tolist(),
                 'measure': measure,
-                'measure_value': [y1.tolist(), y2.tolist()],
+                'measure_value': [y1, y2],
+                'max_min': [max(max(y1), max(y2)), min(min(y1), min(y2))],
                 'sentence': sentence
             }
         elif insight_name == 'change point' or insight_name == 'outlier':
