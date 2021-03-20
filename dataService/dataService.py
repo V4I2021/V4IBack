@@ -175,41 +175,60 @@ class DataService():
                 'sentence': sentence
             }
         elif insight_name == 'correlation':
+            time_col = ""
+            if name == 'carSales1':
+                time_col = 'Year'
+            breakdown_value = insight['breakdown_value'].values[0].split(';')
             col_list = record.columns.values.tolist()
             col_list.remove(insight['measure'].values[0])
-            corr_col_list = [('Correlated ' + c) for c in col_list]
-            corr_record = self.__get_record_by_name(self, name)
-            for i in range(len(corr_col_list)):
-                value = insight[corr_col_list[i]].values[0]
+            record = self.__get_record_by_name(name)
+            record.drop(['cid'], axis=1, inplace=True)
+            print("--------------record-------------")
+            print(record)
+            for i in range(len(col_list)):
+                value = insight[col_list[i]].values[0]
                 if value != '*':
-                    corr_record = corr_record.loc[corr_record[col_list[i]] == value]
-            corr_record.drop(['cid'], axis=1, inplace=True)
-
-            record = record.groupby(breakdown, as_index=False).agg(
+                    record = record.loc[record[col_list[i]] == value]
+            if breakdown_value[1] != '*':
+                corr_record = record.loc[record[insight['breakdown'].values[0]] == breakdown_value[1]]
+            else:
+                corr_record = record.copy()
+            if breakdown_value[0] != '*':
+                record = record.loc[record[insight['breakdown'].values[0]] == breakdown_value[0]]
+            print("--------------record2------------")
+            print(record)
+            print("--------------corr record--------")
+            print(corr_record)
+            corr_record = corr_record.groupby(time_col, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
-            corr_record = corr_record.groupby(breakdown, as_index=False).agg(
+            record = record.groupby(time_col, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
+            print("----------------groupby-----------")
+            print(corr_record)
+            print(record)
             y1 = record[measure].values
             y2 = corr_record[measure].values
             corr, _ = pearsonr(y1, y2)
 
-            corr_col = [('Correlated ' + c) for c in feature_data]
-            corr_subspace = self.__get_subspace_str(corr_col, insight)
+            sentence = "The {} of {} and {} are correlated in {}"\
+                .format(measure, breakdown_value[0], breakdown_value[1],
+                        subspace)
 
-            sentence = 'The Pearson correlation between' \
-                       '{}{} and{}{} is {}.' \
-                .format((' subset with ' if subspace != '' else ' all data'),
-                        ' and '.join(subspace.rsplit(', ', 1)),
-                        (' subset with ' if corr_subspace != '' else ' all data'),
-                        ' and '.join(corr_subspace.rsplit(', ', 1)),
-                        round(corr, 2))
+
+            # sentence = 'The Pearson correlation between' \
+            #            '{}{} and{}{} is {}.' \
+            #     .format((' subset with ' if subspace != '' else ' all data'),
+            #             ' and '.join(subspace.rsplit(', ', 1)),
+            #             (' subset with ' if corr_subspace != '' else ' all data'),
+            #             ' and '.join(corr_subspace.rsplit(', ', 1)),
+            #             round(corr, 2))
 
             return {
                 'insight_name': insight_name,
                 'breakdown': breakdown,
                 'breakdown_value': record[breakdown].tolist(),
                 'measure': measure,
-                'measure_value': [y1, y2],
+                'measure_value': [y1.tolist(), y2.tolist()],
                 'sentence': sentence
             }
         elif insight_name == 'change point' or insight_name == 'outlier':
