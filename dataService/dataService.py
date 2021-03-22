@@ -478,6 +478,7 @@ class DataService():
     def get_similar_insight(self, feature, sid, name, breakdown, breakdown_value):
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
+        subspace_data = pd.merge(subspace_data, insight_data, on='sid', how='inner')
 
         subspace = subspace_data.loc[subspace_data['sid'] == sid]
         feature_value = subspace[feature].tolist()[0]
