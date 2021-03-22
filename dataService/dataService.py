@@ -408,7 +408,13 @@ class DataService():
             data_info['dataDescription'] = 'Describe demographic information.'
 
         data_info['colName'] = record_data.columns.values.tolist()
-        measure_list = insight_data['measure'].unique()
+        measure_list = insight_data['measure'].unique().tolist()
+        for measure in measure_list:
+            if ';' in measure:
+                measure = measure.split(';')
+                measure_list.append(measure[0])
+                measure_list.append(measure[1])
+
         for i in range(len(data_info['colName'])):
             col = data_info['colName'][i]
             if col in measure_list:
