@@ -128,12 +128,10 @@ class DataService():
             record = record.groupby(breakdown, as_index=False).agg({measure: 'sum'})
             record = record.sort_values(by=measure, ascending=False).iloc[0:10]
             measure_value = record[measure].tolist()
-            sentence = 'Given the statistics is {}, ' \
-                       'the maximum value of the {} data is {} ' \
-                       'when {}{}{} is {}.' \
-                .format(measure, 'total', measure_value[0],
-                        subspace, (' and ' if subspace != '' else ''),
-                        breakdown, breakdown_value)
+            sentence = 'The highest {} among {} is {} with {} equals {} {}' \
+                .format(measure, breakdown,
+                        measure_value[0], breakdown, breakdown_value,
+                        'when ' + subspace if subspace != '' else '')
             return {
                 'insight_name': insight_name,
                 'breakdown': breakdown,
@@ -159,13 +157,17 @@ class DataService():
             y = np.array(record[measure]).reshape(-1, 1)
             reg = LinearRegression().fit(x, y)
             slope = reg.coef_[0][0]
-
-            sentence = 'The trend of the {} {} over {}s' \
-                       '{}{} is {}.' \
-                .format('total', measure, breakdown,
-                        (' when ' if subspace != '' else ' in all data'),
-                        ' and '.join(subspace.rsplit(', ', 1)),
-                        ('increasing' if slope >= 0 else 'decreasing'))
+            sentence = 'The sum of {} over {} is {} {}' \
+                .format(measure, breakdown,
+                        ('increasing' if slope >= 0 else 'decreasing'),
+                        ('when ' + ' and '.join(subspace.rsplit(', ', 1)) if subspace != '' else ''),
+                        )
+            # sentence = 'The trend of the {} {} over {}s' \
+            #            '{}{} is {}.' \
+            #     .format('total', measure, breakdown,
+            #             (' when ' if subspace != '' else ' in all data'),
+            #             ' and '.join(subspace.rsplit(', ', 1)),
+            #             ('increasing' if slope >= 0 else 'decreasing'))
             return {
                 'insight_name': insight_name,
                 'breakdown': breakdown,
@@ -269,10 +271,12 @@ class DataService():
                 breakdown_value_list = breakdown_value_list[0:-2]
                 percentage_list = percentage_list[0:-2]
             sentence = '{} makes up {} ' \
-                       'of the {} {}{}{}.' \
+                       'of the {} {}{}{}{}.' \
                 .format(' and '.join(breakdown_value_list.rsplit(', ', 1)),
                         ' and '.join(percentage_list.rsplit(', ', 1)),
-                        'total', measure, (' when ' if subspace != '' else ' in all data'),
+                        'total', measure,
+                        ' respectively ' if len(percentage) > 1 else '',
+                        (' when ' if subspace != '' else ' in all data'),
                         ' and '.join(subspace.rsplit(', ', 1)))
 
             return {
