@@ -84,6 +84,13 @@ class DataService():
     def get_data_by_name(self, name):
         edge_data = self.__get_edge_by_name(name)
         insight_data, insight_name, insight_type = self.__get_insight_by_name(name)
+        measure_col = insight_data['measure'].unique()
+        measures = []
+        for measure in measure_col:
+            if ';' not in measure:
+                measures.append(measure)
+        if len(measures) > 1:
+            measures = ['All Measures'] + measures
         # record_data = self.__get_record_by_name(name)
         subspace_data, feature_data = self.__get_subspace_by_name(name)
         insight_cnt = insight_data['insight'].value_counts().to_dict()
@@ -95,7 +102,8 @@ class DataService():
             'insight_name': insight_name,
             'insight_count': [insight_cnt[x] for x in insight_name],
             'insight_type': insight_type,
-            'subspace': subspace_data.to_dict('index')
+            'subspace': subspace_data.to_dict('index'),
+            'measures': measures
         }
 
     def get_insight_count_for_record_by_name(self, name):
