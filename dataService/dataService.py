@@ -414,13 +414,23 @@ class DataService():
 
         if name == 'carSales1':
             data_info['dataDescription'] = 'Describe vehicle sales.'
-        elif name == 'carSales2':
-            data_info['dataDescription'] = 'Describe vehicle sales in more detail.'
         elif name == 'Census':
             data_info['dataDescription'] = 'Describe demographic information.'
+        elif name == 'COVID-19':
+            data_info['dataDescription'] = 'Describe COVID-19 cases and deaths.'
+        elif name == 'Emission':
+            data_info['dataDescription'] = 'Describe emissions of harmful gases in the process of energy production.'
+        elif name == 'NBA':
+            data_info['dataDescription'] = 'Describe NBA players\' stats since 1947.'
 
         data_info['colName'] = record_data.columns.values.tolist()
-        measure_list = insight_data['measure'].unique()
+        measure_list = insight_data['measure'].unique().tolist()
+        for measure in measure_list:
+            if ';' in measure:
+                measure = measure.split(';')
+                measure_list.append(measure[0])
+                measure_list.append(measure[1])
+
         for i in range(len(data_info['colName'])):
             col = data_info['colName'][i]
             if col in measure_list:
