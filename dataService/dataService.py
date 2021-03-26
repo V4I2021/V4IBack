@@ -436,7 +436,7 @@ class DataService():
             if col in measure_list:
                 data_info['colType'].append('measure')
             else:
-                data_info['colType'].append('attribute')
+                data_info['colType'].append('dimension')
 
             if data_info['colValueType'][i] == 'int' \
                     or data_info['colValueType'][i] == 'float':
