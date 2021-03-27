@@ -522,7 +522,15 @@ class DataService():
             if value == '*':
                 continue
             similar_subspace = subspace_data.loc[subspace_data[feature] == value]
+            print(similar_subspace)
 
+            for index, sub in similar_subspace.iterrows():
+                insights = insight_data.loc[insight_data['sid'] == sub['sid']]
+                similar_iid.extend(insights['iid'].tolist())
+                similar_sid.extend(insights['sid'].tolist())
+                similar_insight_name.extend(insights['insight'].tolist())
+
+            similar_subspace = subspace_data.loc[subspace_data['breakdown_value'] == value]
             for index, sub in similar_subspace.iterrows():
                 insights = insight_data.loc[insight_data['sid'] == sub['sid']]
                 similar_iid.extend(insights['iid'].tolist())
