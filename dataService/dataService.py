@@ -135,7 +135,7 @@ class DataService():
         measure = insight['measure'].iloc[0]
         subspace = self.__get_subspace_str(feature_data, insight)
 
-        if insight_name == 'top1':
+        if insight_name == 'Top1':
             record = record.groupby(breakdown, as_index=False).agg({measure: 'sum'})
             record = record.sort_values(by=measure, ascending=False).iloc[0:10]
             measure_value = record[measure].tolist()
@@ -152,7 +152,7 @@ class DataService():
                 'measure_value': measure_value,
                 'sentence': sentence
             }
-        elif insight_name == 'trend':
+        elif insight_name == 'Trend':
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
 
@@ -188,7 +188,7 @@ class DataService():
                 'measure_value': record[measure].tolist(),
                 'sentence': sentence
             }
-        elif insight_name == 'correlation':
+        elif insight_name == 'Correlation':
             time_col = ""
             if name == 'carSales1':
                 time_col = 'Year'
@@ -236,13 +236,13 @@ class DataService():
                 'max_min': [max(max(y1), max(y2)), min(min(y1), min(y2))],
                 'sentence': sentence
             }
-        elif insight_name == 'change point' or insight_name == 'outlier':
+        elif insight_name == 'Change Point' or insight_name == 'Outlier':
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
             # todo: int value might be read as string
             y = record.loc[record[breakdown] == breakdown_value][measure].iloc[0]
 
-            if insight_name == 'change point':
+            if insight_name == 'Change Point':
                 sentence = '<span style="display:inline;">Among {}s{}{}, ' \
                            'change occurs in <span style="color:#f7cd59; display:inline;">{}</span> ' \
                            'and its {} {} is {}.</span>' \
@@ -268,7 +268,7 @@ class DataService():
                 'y': str(y),
                 'sentence': sentence
             }
-        elif insight_name == 'attribution':
+        elif insight_name == 'Attribution':
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
             record = record.sort_values(by=measure)
@@ -307,7 +307,7 @@ class DataService():
                 'sentence': sentence,
                 'percentage': percentage
             }
-        elif insight_name == 'cross measure correlation':
+        elif insight_name == 'Cross Measure Correlation':
             measures = measure.split(';')
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measures[0]: 'sum', measures[1]: 'sum'})
@@ -335,7 +335,7 @@ class DataService():
                                  reg.predict(x_value[-1].reshape(-1, 1))[0][0]],
                 'sentence': sentence
             }
-        elif insight_name == 'clustering':
+        elif insight_name == 'Clustering':
             measures = measure.split(';')
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measures[0]: 'sum', measures[1]: 'sum'})
