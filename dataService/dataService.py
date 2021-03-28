@@ -194,6 +194,8 @@ class DataService():
                 time_col = 'Year'
             elif name == 'Emission':
                 time_col = 'Year'
+            elif name == 'NBA':
+                time_col = 'year'
             print("breakpoint reached")
 
             breakdown_value = insight['breakdown_value'].values[0].split(';')
