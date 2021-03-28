@@ -192,6 +192,10 @@ class DataService():
             time_col = ""
             if name == 'carSales1':
                 time_col = 'Year'
+            elif name == 'Emission':
+                time_col = 'Year'
+            print("breakpoint reached")
+
             breakdown_value = insight['breakdown_value'].values[0].split(';')
             col_list = record.columns.values.tolist()
             col_list.remove(insight['measure'].values[0])
