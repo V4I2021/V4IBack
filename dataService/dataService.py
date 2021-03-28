@@ -138,7 +138,7 @@ class DataService():
             measure_value = record[measure].tolist()
             sentence = 'The highest {} among {} is {} with {} equals {} {}' \
                 .format(measure, breakdown,
-                        measure_value[0], breakdown, breakdown_value,
+                        round(measure_value[0], 2), breakdown, breakdown_value,
                         'when ' + subspace if subspace != '' else '')
             return {
                 'insight_name': insight_name,
@@ -242,14 +242,14 @@ class DataService():
                            'and its {} {} is {}.' \
                     .format(breakdown, (' when ' if subspace != '' else ' in all data'),
                             ' and '.join(subspace.rsplit(', ', 1)),
-                            breakdown_value, 'total', measure, y)
+                            breakdown_value, 'total', measure, round(y, 2))
 
             else:
                 sentence = 'Among {}s{}{}, ' \
                            'the {} {} of {} in {} is an anomaly.' \
                     .format(breakdown, (' when ' if subspace != '' else ' in all data'),
                             ' and '.join(subspace.rsplit(', ', 1)),
-                            'total', measure, y, breakdown_value)
+                            'total', measure, round(y, 2), breakdown_value)
 
             return {
                 'insight_name': insight_name,
@@ -522,20 +522,14 @@ class DataService():
             if value == '*':
                 continue
             similar_subspace = subspace_data.loc[subspace_data[feature] == value]
-            print(similar_subspace)
-
-            for index, sub in similar_subspace.iterrows():
-                insights = insight_data.loc[insight_data['sid'] == sub['sid']]
-                similar_iid.extend(insights['iid'].tolist())
-                similar_sid.extend(insights['sid'].tolist())
-                similar_insight_name.extend(insights['insight'].tolist())
+            similar_iid.extend(similar_subspace['iid'].tolist())
+            similar_sid.extend(similar_subspace['sid'].tolist())
+            similar_insight_name.extend(similar_subspace['insight'].tolist())
 
             similar_subspace = subspace_data.loc[subspace_data['breakdown_value'] == value]
-            for index, sub in similar_subspace.iterrows():
-                insights = insight_data.loc[insight_data['sid'] == sub['sid']]
-                similar_iid.extend(insights['iid'].tolist())
-                similar_sid.extend(insights['sid'].tolist())
-                similar_insight_name.extend(insights['insight'].tolist())
+            similar_iid.extend(similar_subspace['iid'].tolist())
+            similar_sid.extend(similar_subspace['sid'].tolist())
+            similar_insight_name.extend(similar_subspace['insight'].tolist())
 
         return {
             'similar_iid': similar_iid,
