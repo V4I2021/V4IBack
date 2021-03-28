@@ -196,6 +196,8 @@ class DataService():
                 time_col = 'Year'
             elif name == 'Census':
                 time_col = 'Birthday'
+            elif name == 'NBA':
+                time_col = 'year'
 
             breakdown_value = insight['breakdown_value'].values[0].split(';')
             _, col_list = self.__get_subspace_by_name(name)
