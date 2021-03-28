@@ -194,11 +194,11 @@ class DataService():
                 time_col = 'Year'
             elif name == 'Emission':
                 time_col = 'Year'
-            print("breakpoint reached")
+            elif name == 'Census':
+                time_col = 'Birthday'
 
             breakdown_value = insight['breakdown_value'].values[0].split(';')
             _, col_list = self.__get_subspace_by_name(name)
-            print(col_list)
             record = self.__get_record_by_name(name)
             record.drop(['cid'], axis=1, inplace=True)
 
@@ -275,7 +275,7 @@ class DataService():
         elif insight_name == 'Attribution':
             record = record.groupby(breakdown, as_index=False).agg(
                 {breakdown: 'first', measure: 'sum'})
-            record = record.sort_values(by=measure)
+            record = record.sort_values(by=measure, ascending=False)
 
             breakdown_value = record[breakdown].tolist()
             percentage = (record[measure] / record[measure].sum()).tolist()
