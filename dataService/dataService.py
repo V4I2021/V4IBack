@@ -72,11 +72,14 @@ class DataService():
         return df
 
     def __get_subspace_str(self, subspace_col, row):
+        style_before = '<span style="color:#f7cd59; display:inline;">'
+        style_after = '</span>'
+
         subspace = ''
         for i in range(len(subspace_col)):
             col = subspace_col[i]
             if row[col].tolist()[0] != '*':
-                subspace += col + ' is ' + row[col].tolist()[0] + ', '
+                subspace += col + ' is ' + style_before + row[col].tolist()[0] + style_after + ', '
         if subspace[-2:] == ', ':
             subspace = subspace[0:-2]
         return subspace
@@ -136,9 +139,10 @@ class DataService():
             record = record.groupby(breakdown, as_index=False).agg({measure: 'sum'})
             record = record.sort_values(by=measure, ascending=False).iloc[0:10]
             measure_value = record[measure].tolist()
-            sentence = 'The highest {} among {} is {} with {} equals {} {}' \
-                .format(measure, breakdown,
-                        round(measure_value[0], 2), breakdown, breakdown_value,
+            sentence = '<span style="display:inline;">The highest {} among {} is {} with {} ' \
+                       'equals <span style="color:#f7cd59; display:inline;">{}</span> {}.</span>' \
+                .format(measure, breakdown, round(measure_value[0], 2),
+                        breakdown, breakdown_value,
                         'when ' + subspace if subspace != '' else '')
             return {
                 'insight_name': insight_name,
@@ -165,11 +169,11 @@ class DataService():
             y = np.array(record[measure]).reshape(-1, 1)
             reg = LinearRegression().fit(x, y)
             slope = reg.coef_[0][0]
-            sentence = 'The sum of {} over {} is {} {}' \
+            sentence = '<span style="display:inline;">The sum of {} over {} is ' \
+                       '<span style="color:#f7cd59; display:inline;">{}</span> {}.</span>' \
                 .format(measure, breakdown,
                         ('increasing' if slope >= 0 else 'decreasing'),
-                        ('when ' + ' and '.join(subspace.rsplit(', ', 1)) if subspace != '' else ''),
-                        )
+                        ('when ' + ' and '.join(subspace.rsplit(', ', 1)) if subspace != '' else ''), )
             # sentence = 'The trend of the {} {} over {}s' \
             #            '{}{} is {}.' \
             #     .format('total', measure, breakdown,
@@ -213,7 +217,9 @@ class DataService():
             y2 = corr_record[measure].values
             corr, _ = pearsonr(y1, y2)
 
-            sentence = "The {} of {} and {} are correlated {}." \
+            sentence = '<span style="display:inline;">The {} of ' \
+                       '<span style="color:#f7cd59; display:inline;">{}</span> and ' \
+                       '<span style="color:#f7cd59; display:inline;">{}</span> are correlated {}.</span>' \
                 .format(measure, breakdown_value[0],
                         (breakdown_value[1] if breakdown_value[1] != '*' else 'all data'),
                         ('in the dataset' if subspace == '' else 'when ' + subspace))
@@ -237,16 +243,17 @@ class DataService():
             y = record.loc[record[breakdown] == breakdown_value][measure].iloc[0]
 
             if insight_name == 'change point':
-                sentence = 'Among {}s{}{}, ' \
-                           'change occurs in {} ' \
-                           'and its {} {} is {}.' \
+                sentence = '<span style="display:inline;">Among {}s{}{}, ' \
+                           'change occurs in <span style="color:#f7cd59; display:inline;">{}</span> ' \
+                           'and its {} {} is {}.</span>' \
                     .format(breakdown, (' when ' if subspace != '' else ' in all data'),
                             ' and '.join(subspace.rsplit(', ', 1)),
                             breakdown_value, 'total', measure, round(y, 2))
 
             else:
-                sentence = 'Among {}s{}{}, ' \
-                           'the {} {} of {} in {} is an anomaly.' \
+                sentence = '<span style="display:inline;">Among {}s{}{}, ' \
+                           'the {} {} of {} in ' \
+                           '<span style="color:#f7cd59; display:inline;">{}</span> is an anomaly.</span>' \
                     .format(breakdown, (' when ' if subspace != '' else ' in all data'),
                             ' and '.join(subspace.rsplit(', ', 1)),
                             'total', measure, round(y, 2), breakdown_value)
@@ -272,14 +279,20 @@ class DataService():
             breakdown_value_list = ''
             percentage_list = ''
             for i in range(len(breakdown_value)):
-                breakdown_value_list += breakdown_value[i] + ', '
                 percentage[i] = round(percentage[i], 2)
-                percentage_list += str(percentage[i]) + ', '
+                if i == 0:
+                    breakdown_value_list += '<span style="color:#f7cd59; display:inline;">' \
+                                            + breakdown_value[i] + '</span>, '
+                    percentage_list += '<span style="color:#f7cd59; display:inline;">' \
+                                       + str(percentage[i]) + '</span>, '
+                else:
+                    breakdown_value_list += breakdown_value[i] + ', '
+                    percentage_list += str(percentage[i]) + ', '
             if breakdown_value_list[-2:] == ', ':
                 breakdown_value_list = breakdown_value_list[0:-2]
                 percentage_list = percentage_list[0:-2]
-            sentence = '{} makes up {} ' \
-                       'of the {} {}{}{}{}.' \
+            sentence = '<span style="display:inline;">{} makes up {} ' \
+                       'of the {} {}{}{}{}.</span>' \
                 .format(' and '.join(breakdown_value_list.rsplit(', ', 1)),
                         ' and '.join(percentage_list.rsplit(', ', 1)),
                         'total', measure,
@@ -304,8 +317,10 @@ class DataService():
             y_value = record[measures[1]].values
             reg = LinearRegression().fit(x_value.reshape(-1, 1), y_value.reshape(-1, 1))
 
-            sentence = '{} and {} are linear correlated' \
-                       '{}{}{}being grouped by {}.' \
+            sentence = '<span style="display:inline;">' \
+                       '<span style="color:#f7cd59; display:inline;">{}</span> and ' \
+                       '<span style="color:#f7cd59; display:inline;">{}</span> are linear correlated' \
+                       '{}{}{}being grouped by {}.</span>' \
                 .format(measures[0], measures[1],
                         (' when ' if subspace != '' else ' in all data'),
                         ' and '.join(subspace.rsplit(', ', 1)),
@@ -345,8 +360,10 @@ class DataService():
                         cnt -= 1
                 noise += 'etc'
 
-            sentence = '{} and {} form clusters' \
-                       '{}{}{}being grouped by {}{}{}.' \
+            sentence = '<span style="display:inline;">' \
+                       '<span style="color:#f7cd59; display:inline;">{}</span> and ' \
+                       '<span style="color:#f7cd59; display:inline;">{}</span> form clusters' \
+                       '{}{}{}being grouped by {}{}{}.</span>' \
                 .format(measures[0], measures[1],
                         (' when ' if subspace != '' else ' in all data'),
                         ' and '.join(subspace.rsplit(', ', 1)),
