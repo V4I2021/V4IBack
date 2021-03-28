@@ -197,8 +197,8 @@ class DataService():
             print("breakpoint reached")
 
             breakdown_value = insight['breakdown_value'].values[0].split(';')
-            col_list = record.columns.values.tolist()
-            col_list.remove(insight['measure'].values[0])
+            _, col_list = self.__get_subspace_by_name(name)
+            print(col_list)
             record = self.__get_record_by_name(name)
             record.drop(['cid'], axis=1, inplace=True)
 
